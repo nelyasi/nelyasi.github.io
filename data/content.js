@@ -132,6 +132,13 @@ window.GALLERY = [
 // YouTube: find the video ID after ?v= in the URL
 // Vimeo:   find the numeric ID in the URL
 window.VIDEOS = [
+
+  js{
+  type:    "youtube",
+  videoId: "are6Ra75Zs4",
+  title:   "Toward Quantum Data Centers: Noise Evaluation of Fiber-Based Interconnects Through Distributed Algorithm Emulation",
+  meta:    "ECOC 2025 · European Conference on Optical Communications",
+   }
   // ── ADD a YouTube talk:
   // {
   //   type:    "youtube",
