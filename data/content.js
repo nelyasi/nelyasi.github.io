@@ -89,13 +89,6 @@ window.PROJECTS = [
     url:  "https://github.com/nelyasi/OQB-implementation---Batsim",
   },
   {
-    type: "Open Source Fork",
-    name: "mapomatic",
-    desc: "Automatic mapping of compiled quantum circuits to low-noise sub-graphs of real quantum hardware. Forked from the Qiskit Community repository.",
-    tags: ["Python", "Qiskit", "Quantum Hardware", "Noise Mitigation"],
-    url:  "https://github.com/nelyasi/mapomatic",
-  },
-  {
     type: "Research Framework",
     name: "Quantum Data Center Emulator",
     desc: "A framework for emulating optically-interconnected quantum data center topologies using digital quantum computers, benchmarking cost–fidelity trade-offs.",
