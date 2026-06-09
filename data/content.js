@@ -128,6 +128,7 @@ window.GALLERY = [
 ];
 
 
+
 /* ── Videos ────────────────────────────────────────────────── */
 // YouTube: find the video ID after ?v= in the URL
 // Vimeo:   find the numeric ID in the URL
@@ -137,6 +138,12 @@ window.VIDEOS = [
     videoId: "are6Ra75Zs4",
     title:   "Toward Quantum Data Centers: Noise Evaluation of Fiber-Based Interconnects Through Distributed Algorithm Emulation",
     meta:    "ECOC 2025 · European Conference on Optical Communications",
+  },
+  {
+    type:    "youtube",
+    videoId: "7tPHb9aZ6Zg",
+    title:   "Investigation of open quantum batteries and using IBM quantum computers to simulate them",
+    meta:    "QSD2023",
   },
   // ── ADD a YouTube talk:
   // {
