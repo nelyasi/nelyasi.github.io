@@ -117,7 +117,7 @@ window.PROJECTS = [
 // To show a real image: upload the file to assets/images/ next to index.html,
 // then set src: "assets/images/my-figure.png"
 window.GALLERY = [
-  { src: null, caption: "Visiting Anne L'Huillier in 2025 WACQT Meeting", dirac: "assets/images/anne.jpeg" },
+  { src: "assets/images/anne.jpeg", caption: "Visiting Anne L'Huillier in 2025 WACQT may meeting.", dirac: "Visit" },
 
   // ── ADD a gallery item:
   // { src: "assets/images/my-figure.png", caption: "Figure caption here", dirac: "|fig⟩" },
