@@ -117,12 +117,8 @@ window.PROJECTS = [
 // To show a real image: upload the file to assets/images/ next to index.html,
 // then set src: "assets/images/my-figure.png"
 window.GALLERY = [
-  { src: null, caption: "Quantum circuit diagram — GHZ state preparation", dirac: "|GHZ⟩" },
-  { src: null, caption: "Noise evaluation — fiber-based interconnects",     dirac: "⟨noise|" },
-  { src: null, caption: "Quantum data center topology schematic",            dirac: "|QDC⟩"  },
-  { src: null, caption: "Daemonic work extraction protocol",                 dirac: "⟨W_d|"  },
-  { src: null, caption: "IBM Quantum hardware results",                      dirac: "|IBM⟩"  },
-  { src: null, caption: "Bloch sphere visualisation",                        dirac: "|ψ⟩"   },
+  { src: null, caption: "Visiting Anne L'Huillier in 2025 WACQT Meeting", dirac: "assets/images/anne.jpeg" },
+
   // ── ADD a gallery item:
   // { src: "assets/images/my-figure.png", caption: "Figure caption here", dirac: "|fig⟩" },
 ];
