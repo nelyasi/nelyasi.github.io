@@ -1,172 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Seyed Navid Elyasi | Quantum Researcher</title>
-<meta name="description" content="Academic portfolio of Seyed Navid Elyasi — Open Quantum Systems, Quantum Information, Distributed Quantum Computing, Chalmers University of Technology."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
-<style>
-:root{
-  /* IBM Carbon dark theme */
-  --bg:#161616;--bg-soft:#1c1c1c;--bg-card:#262626;
-  /* IBM Blue 40 as primary accent (Qiskit electric blue) */
-  --gold:#78a9ff;--gold-dim:rgba(120,169,255,.55);--gold-ghost:rgba(120,169,255,.08);
-  /* Borders keyed to IBM blue */
-  --border:rgba(120,169,255,.14);--border-mid:rgba(120,169,255,.28);--border-hi:rgba(120,169,255,.50);
-  /* IBM neutral text scale */
-  --text:#f4f4f4;--text-dim:#a8b2c1;--text-mute:#6f7785;--text-ghost:#3d4451;
-  /* IBM Plex font family */
-  --mono:'IBM Plex Mono',monospace;--serif:'IBM Plex Serif',Georgia,serif;--display:'IBM Plex Sans',system-ui,sans-serif;
-  /* Cyan accent for Qiskit highlights */
-  --cyan:#33b1ff;--cyan-dim:rgba(51,177,255,.45);
-  --r:2px;--ease:.22s ease;--max:1080px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:17px}
-body{background:var(--bg);color:var(--text);font-family:var(--display);line-height:1.75;-webkit-font-smoothing:antialiased}
-a{color:var(--gold);text-decoration:none;transition:opacity var(--ease)}
-a:hover{opacity:.72}
-img{max-width:100%;display:block}
-strong{color:#f4f4f4;font-weight:500}
-::-webkit-scrollbar{width:5px}
-::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:var(--border-hi);border-radius:3px}
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seyed Navid Elyasi | Quantum Researcher</title>
+  <meta name="description" content="Academic portfolio of Seyed Navid Elyasi — Open Quantum Systems, Quantum Information, Distributed Quantum Computing, Chalmers University of Technology."/>
 
-#progress-bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--gold);z-index:999;transition:width .1s linear}
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
 
-.container{max-width:var(--max);margin:0 auto;padding:0 2rem}
-section{padding:6rem 0;border-top:1px solid var(--border)}
-
-/* NAV */
-#navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(22,22,22,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
-.nav-inner{max-width:var(--max);margin:0 auto;padding:0 2rem;height:58px;display:flex;align-items:center;gap:1.5rem}
-.nav-brand{font-family:var(--display);font-size:1.05rem;color:var(--gold);letter-spacing:.04em;white-space:nowrap}
-.nav-dirac{font-family:var(--mono);font-size:.68rem;color:rgba(120,169,255,.28);white-space:nowrap}
-.nav-links{list-style:none;display:flex;gap:1.8rem;margin-left:auto}
-.nav-links a{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-mute);transition:color var(--ease)}
-.nav-links a:hover,.nav-links a.active{color:var(--gold);opacity:1}
-.hamburger{display:none;background:none;border:none;color:var(--gold);font-size:1.3rem;cursor:pointer;margin-left:auto}
-.nav-mobile{display:none;flex-direction:column;list-style:none;background:var(--bg-soft);border-top:1px solid var(--border);padding:1rem 2rem;gap:1rem}
-.nav-mobile.open{display:flex}
-.nav-mobile a{font-family:var(--mono);font-size:.75rem;color:var(--text-dim);letter-spacing:.08em;text-transform:uppercase}
-
-/* HERO */
-#hero{min-height:100vh;padding-top:58px;display:flex;align-items:center;position:relative;overflow:hidden;border-top:none}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(51,177,255,.027) 1px,transparent 1px),linear-gradient(90deg,rgba(51,177,255,.027) 1px,transparent 1px);background-size:58px 58px;pointer-events:none}
-.hero-content{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:4rem 2rem;flex:1}
-.hero-kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
-.hero-name{font-family:var(--display);font-size:clamp(3.2rem,8vw,6.2rem);font-weight:300;line-height:1.04;color:#f4f4f4;margin-bottom:1rem}
-.hero-name em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:1rem;color:var(--text-dim);margin-bottom:.6rem;letter-spacing:.025em}
-.hero-dirac{font-family:var(--mono);font-size:.78rem;color:rgba(120,169,255,.42);margin-bottom:2rem}
-.hero-cta{display:flex;gap:.9rem;flex-wrap:wrap}
-.btn-gold{display:inline-block;padding:.65rem 1.7rem;background:var(--gold);color:#161616;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;border-radius:var(--r);transition:opacity var(--ease),transform var(--ease)}
-.btn-gold:hover{opacity:.85;transform:translateY(-1px)}
-.btn-outline{display:inline-block;padding:.65rem 1.7rem;border:1px solid var(--border-hi);color:var(--text);font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;border-radius:var(--r);transition:border-color var(--ease),color var(--ease)}
-.btn-outline:hover{border-color:var(--gold);color:var(--gold);opacity:1}
-.hero-bloch{position:absolute;right:2%;top:50%;transform:translateY(-50%);width:min(460px,44vw);z-index:1;opacity:.88}
-#bloch-canvas{width:100%;height:auto;display:block}
-
-/* SECTION COMMON */
-.sec-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
-h2{font-family:var(--display);font-size:clamp(1.9rem,3.5vw,2.6rem);font-weight:400;color:#f4f4f4;line-height:1.12;margin-bottom:.4rem}
-.dirac-accent{font-family:var(--mono);font-size:.74rem;color:rgba(120,169,255,.38);margin-bottom:2.2rem;display:block}
-
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:210px 1fr;gap:3.5rem;align-items:start}
-.avatar{width:210px;aspect-ratio:4/5;overflow:hidden;border:1px solid var(--border-mid);border-radius:var(--r);background:var(--bg-card);position:relative}
-.avatar img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:filter var(--ease)}
-.avatar img:hover{filter:grayscale(0)}
-.avatar-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;background:linear-gradient(135deg,var(--bg-card),#1c1c1c);font-family:var(--display);font-size:2.8rem;color:var(--gold)}
-.avatar-ket{font-family:var(--mono);font-size:.62rem;color:var(--gold-dim)}
-.social-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
-.pill{font-family:var(--mono);font-size:.6rem;letter-spacing:.07em;text-transform:uppercase;padding:.28rem .72rem;border:1px solid var(--border-mid);border-radius:99px;color:var(--text-dim);transition:border-color var(--ease),color var(--ease)}
-.pill:hover{border-color:var(--gold);color:var(--gold);opacity:1}
-.affil{font-family:var(--mono);font-size:.72rem;color:var(--gold-dim);margin-bottom:1.2rem}
-.about-body p{font-size:1rem;color:#a8b2c1;margin-bottom:.9rem}
-.tag-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.2rem}
-.tag-row span{font-family:var(--mono);font-size:.6rem;padding:.22rem .62rem;background:var(--bg-card);border:1px solid var(--border);color:var(--text-mute);border-radius:var(--r)}
-.lindblad{font-family:var(--mono);font-size:.68rem;color:rgba(120,169,255,.18);margin-top:1.5rem!important;font-style:normal!important}
-
-/* PUBLICATIONS */
-.pub-filters{display:flex;gap:.4rem;margin-bottom:2.2rem;flex-wrap:wrap}
-.pf{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border:1px solid var(--border);background:none;color:var(--text-mute);cursor:pointer;border-radius:var(--r);transition:border-color var(--ease),color var(--ease)}
-.pf.active,.pf:hover{border-color:var(--gold);color:var(--gold)}
-.pub-year{font-family:var(--display);font-size:1.5rem;color:var(--cyan);border-bottom:1px solid var(--border);padding-bottom:.4rem;margin:2rem 0 1.1rem}
-.pub-year:first-child{margin-top:0}
-.pub-row{padding:1rem 0;border-bottom:1px solid rgba(120,169,255,.07);display:grid;grid-template-columns:28px 1fr;gap:0 1rem}
-.pub-n{font-family:var(--mono);font-size:.6rem;color:var(--text-ghost);padding-top:4px}
-.pub-title{font-size:1rem;font-weight:500;color:#f4f4f4;margin-bottom:.2rem;line-height:1.4}
-.pub-authors{font-size:.9rem;color:var(--text-dim);margin-bottom:.12rem}
-.pub-venue{font-size:.85rem;color:var(--text-mute);font-style:italic}
-.pub-link{display:inline-block;margin-top:.45rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .62rem;border:1px solid var(--border-mid);color:var(--gold);border-radius:var(--r);transition:background var(--ease)}
-.pub-link:hover{background:var(--gold-ghost);opacity:1}
-
-/* PROJECTS */
-.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.1rem}
-.proj-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;display:flex;flex-direction:column;gap:.55rem;transition:border-color var(--ease),transform var(--ease),box-shadow var(--ease)}
-.proj-card:hover{border-color:var(--border-hi);transform:translateY(-2px);box-shadow:0 0 24px rgba(120,169,255,.10)}
-.proj-type{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan)}
-.proj-name{font-family:var(--display);font-size:1.25rem;color:#f4f4f4;line-height:1.25}
-.proj-desc{font-size:.92rem;color:var(--text-dim);flex:1}
-.proj-tags{display:flex;flex-wrap:wrap;gap:.3rem}
-.proj-tags span{font-family:var(--mono);font-size:.58rem;padding:.18rem .52rem;background:var(--bg);border:1px solid var(--border);color:var(--text-ghost);border-radius:var(--r)}
-.proj-link{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:.2rem}
-
-/* GALLERY */
-.gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.75rem}
-.gal-item{aspect-ratio:4/3;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;cursor:pointer;position:relative}
-.gal-item img{width:100%;height:100%;object-fit:cover;filter:grayscale(18%);transition:transform .4s ease,filter .35s ease}
-.gal-item:hover img{transform:scale(1.04);filter:grayscale(0)}
-.gal-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem}
-.gal-ket{font-family:var(--mono);font-size:1.1rem;color:rgba(51,177,255,.32)}
-.gal-label{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-ghost)}
-.gal-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.72));padding:1rem .9rem .75rem;transform:translateY(100%);transition:transform var(--ease)}
-.gal-item:hover .gal-cap{transform:translateY(0)}
-.gal-cap p{font-size:.85rem;color:#f4f4f4}
-.lightbox{display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.92);align-items:center;justify-content:center;flex-direction:column;gap:1rem}
-.lightbox.open{display:flex}
-.lightbox img{max-width:90vw;max-height:80vh;object-fit:contain;border:1px solid var(--border)}
-.lightbox p{color:var(--text-dim);font-size:.95rem}
-.lb-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:1px solid var(--border);color:var(--text-dim);font-size:1.4rem;width:42px;height:42px;border-radius:50%;cursor:pointer;line-height:1}
-.lb-close:hover{border-color:var(--gold);color:var(--gold)}
-
-/* VIDEOS */
-.vid-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.1rem}
-.vid-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color var(--ease),transform var(--ease)}
-.vid-card:hover{border-color:var(--border-hi);transform:translateY(-2px)}
-.vid-embed{position:relative;padding-bottom:56.25%;height:0;background:#000}
-.vid-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
-.vid-info{padding:1.1rem 1.3rem}
-.vid-title{font-family:var(--display);font-size:1.1rem;color:#f4f4f4;margin-bottom:.2rem}
-.vid-meta{font-family:var(--mono);font-size:.68rem;color:var(--text-ghost)}
-.vid-empty{grid-column:1/-1;text-align:center;padding:4rem 2rem;border:1px dashed var(--border);border-radius:var(--r);font-family:var(--mono);font-size:.75rem;color:var(--text-ghost);letter-spacing:.06em}
-
-/* CONTACT */
-#contact{background:var(--bg-soft)}
-.contact-wrap{text-align:center}
-.contact-sub{color:var(--text-dim);font-size:1rem;margin-bottom:2.2rem;line-height:1.9}
-.contact-cards{display:flex;justify-content:center;flex-wrap:wrap;gap:.8rem}
-.cc{display:flex;align-items:center;gap:.6rem;padding:.9rem 1.6rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);color:var(--text-dim);font-size:.95rem;transition:border-color var(--ease),color var(--ease)}
-.cc:hover{border-color:var(--gold);color:var(--gold);opacity:1}
-.cc-icon{color:var(--gold);font-size:1.05rem}
-
-footer{border-top:1px solid var(--border);padding:2rem 0}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;font-family:var(--mono);font-size:.62rem;color:var(--text-ghost);letter-spacing:.04em}
-.footer-dirac{color:rgba(120,169,255,.22)}
-
-.fade-up{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
-.fade-up.visible{opacity:1;transform:translateY(0)}
-
-@media(max-width:860px){.hero-bloch{width:38vw;opacity:.4}.about-grid{grid-template-columns:1fr}.avatar{max-width:240px;margin:0 auto}.social-pills{justify-content:center}}
-@media(max-width:640px){html{font-size:16px}.nav-links,.nav-dirac{display:none}.hamburger{display:block}.hero-bloch{display:none}section{padding:4.5rem 0}.vid-grid{grid-template-columns:1fr}.footer-inner{flex-direction:column;text-align:center}}
-</style>
+  <!-- Stylesheets — each file controls one concern -->
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/navbar.css"/>
+  <link rel="stylesheet" href="css/hero.css"/>
+  <link rel="stylesheet" href="css/about.css"/>
+  <link rel="stylesheet" href="css/publications.css"/>
+  <link rel="stylesheet" href="css/sections.css"/>
 </head>
 <body>
+
+<!-- ── Scroll progress indicator ── -->
 <div id="progress-bar"></div>
 
+
+<!-- ══════════════════════════════════════
+     NAVIGATION
+     ══════════════════════════════════════ -->
 <nav id="navbar">
   <div class="nav-inner">
     <span class="nav-brand">S. N. Elyasi</span>
@@ -182,12 +43,19 @@ footer{border-top:1px solid var(--border);padding:2rem 0}
     <button class="hamburger" id="hamburger">&#9776;</button>
   </div>
   <ul class="nav-mobile" id="nav-mobile">
-    <li><a href="#about">About</a></li><li><a href="#publications">Publications</a></li>
-    <li><a href="#projects">Projects</a></li><li><a href="#gallery">Gallery</a></li>
-    <li><a href="#videos">Videos</a></li><li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
+
+<!-- ══════════════════════════════════════
+     HERO
+     ══════════════════════════════════════ -->
 <header id="hero">
   <div class="hero-grid"></div>
   <div class="hero-content">
@@ -200,26 +68,37 @@ footer{border-top:1px solid var(--border);padding:2rem 0}
       <a href="#about" class="btn-outline">About Me</a>
     </div>
   </div>
-  <div class="hero-bloch"><canvas id="bloch-canvas" width="500" height="500"></canvas></div>
+  <!-- Animated Bloch sphere (drawn by js/bloch.js) -->
+  <div class="hero-bloch">
+    <canvas id="bloch-canvas" width="500" height="500"></canvas>
+  </div>
 </header>
 
+
+<!-- ══════════════════════════════════════
+     ABOUT
+     ══════════════════════════════════════ -->
 <section id="about">
   <div class="container">
     <div class="sec-label">01 &mdash; About</div>
     <p class="dirac-accent">⟨researcher| = ⟨quantum| ⊗ ⟨computing| ⊗ ⟨chalmers|</p>
     <div class="about-grid">
+
+      <!-- Left column: photo + social -->
       <div>
         <div class="avatar">
-          <img src="navid.png" alt="Seyed Navid Elyasi"/>
+          <img src="assets/images/navid.png" alt="Seyed Navid Elyasi"/>
         </div>
         <div class="social-pills">
-          <a href="https://orcid.org/0009-0008-2562-9039" target="_blank" class="pill">ORCID</a>
+          <a href="https://orcid.org/0009-0008-2562-9039"             target="_blank" class="pill">ORCID</a>
           <a href="https://www.linkedin.com/in/navid-elyasi-49063922b/" target="_blank" class="pill">LinkedIn</a>
-          <a href="https://x.com/SNavidElyasi" target="_blank" class="pill">X / Twitter</a>
-          <a href="https://github.com/nelyasi" target="_blank" class="pill">GitHub</a>
-          <a href="mailto:elyasi@chalmers.se" class="pill">Email</a>
+          <a href="https://x.com/SNavidElyasi"                         target="_blank" class="pill">X / Twitter</a>
+          <a href="https://github.com/nelyasi"                          target="_blank" class="pill">GitHub</a>
+          <a href="mailto:elyasi@chalmers.se"                                          class="pill">Email</a>
         </div>
       </div>
+
+      <!-- Right column: bio -->
       <div class="about-body">
         <h2>Seyed Navid Elyasi</h2>
         <p class="affil">PhD Researcher &nbsp;·&nbsp; Chalmers University of Technology, Gothenburg, Sweden</p>
@@ -232,15 +111,22 @@ footer{border-top:1px solid var(--border);padding:2rem 0}
         </div>
         <p class="lindblad">∂ρ/∂t = −i/ℏ [H,ρ] + Σₖ ( LₖρLₖ† − ½{Lₖ†Lₖ, ρ} ) — Lindblad master equation</p>
       </div>
+
     </div>
   </div>
 </section>
 
+
+<!-- ══════════════════════════════════════
+     PUBLICATIONS
+     ══════════════════════════════════════ -->
 <section id="publications">
   <div class="container">
     <div class="sec-label">02 &mdash; Publications</div>
     <h2>Research Publications</h2>
     <p class="dirac-accent">|paper⟩ = Σᵢ cᵢ |insight⟩ᵢ &nbsp;·&nbsp; peer-reviewed articles, conference proceedings &amp; preprints</p>
+
+    <!-- Year filter buttons (rendered by render.js) -->
     <div class="pub-filters">
       <button class="pf active" data-year="all">All</button>
       <button class="pf" data-year="2026">2026</button>
@@ -251,6 +137,10 @@ footer{border-top:1px solid var(--border);padding:2rem 0}
   </div>
 </section>
 
+
+<!-- ══════════════════════════════════════
+     PROJECTS
+     ══════════════════════════════════════ -->
 <section id="projects">
   <div class="container">
     <div class="sec-label">03 &mdash; Projects</div>
@@ -260,6 +150,10 @@ footer{border-top:1px solid var(--border);padding:2rem 0}
   </div>
 </section>
 
+
+<!-- ══════════════════════════════════════
+     GALLERY
+     ══════════════════════════════════════ -->
 <section id="gallery">
   <div class="container">
     <div class="sec-label">04 &mdash; Gallery</div>
@@ -267,12 +161,19 @@ footer{border-top:1px solid var(--border);padding:2rem 0}
     <p class="dirac-accent">⟨figure|data⟩ &nbsp;·&nbsp; research visualisations, circuit diagrams &amp; conference moments</p>
     <div class="gal-grid" id="gal-grid"></div>
   </div>
+
+  <!-- Lightbox overlay -->
   <div class="lightbox" id="lightbox">
     <button class="lb-close" id="lb-close">&times;</button>
-    <img id="lb-img" src="" alt=""/><p id="lb-cap"></p>
+    <img id="lb-img" src="" alt=""/>
+    <p id="lb-cap"></p>
   </div>
 </section>
 
+
+<!-- ══════════════════════════════════════
+     VIDEOS
+     ══════════════════════════════════════ -->
 <section id="videos">
   <div class="container">
     <div class="sec-label">05 &mdash; Videos</div>
@@ -282,21 +183,32 @@ footer{border-top:1px solid var(--border);padding:2rem 0}
   </div>
 </section>
 
+
+<!-- ══════════════════════════════════════
+     CONTACT
+     ══════════════════════════════════════ -->
 <section id="contact">
   <div class="container contact-wrap">
     <div class="sec-label">06 &mdash; Contact</div>
     <h2>Get in Touch</h2>
     <p class="dirac-accent" style="text-align:center;">⟨collaboration|open⟩ = 1</p>
-    <p class="contact-sub">Open to research collaborations and proposals in quantum technologies.<br>The best way to reach me is by email.</p>
+    <p class="contact-sub">
+      Open to research collaborations and proposals in quantum technologies.<br>
+      The best way to reach me is by email.
+    </p>
     <div class="contact-cards">
-      <a href="mailto:elyasi@chalmers.se" class="cc"><span class="cc-icon">✉</span><span>elyasi@chalmers.se</span></a>
-      <a href="https://www.linkedin.com/in/navid-elyasi-49063922b/" target="_blank" class="cc"><span class="cc-icon">in</span><span>LinkedIn</span></a>
-      <a href="https://x.com/SNavidElyasi" target="_blank" class="cc"><span class="cc-icon">𝕏</span><span>@SNavidElyasi</span></a>
-      <a href="https://github.com/nelyasi" target="_blank" class="cc"><span class="cc-icon">⌥</span><span>GitHub</span></a>
+      <a href="mailto:elyasi@chalmers.se"                              class="cc"><span class="cc-icon">✉</span><span>elyasi@chalmers.se</span></a>
+      <a href="https://www.linkedin.com/in/navid-elyasi-49063922b/"  target="_blank" class="cc"><span class="cc-icon">in</span><span>LinkedIn</span></a>
+      <a href="https://x.com/SNavidElyasi"                           target="_blank" class="cc"><span class="cc-icon">𝕏</span><span>@SNavidElyasi</span></a>
+      <a href="https://github.com/nelyasi"                            target="_blank" class="cc"><span class="cc-icon">⌥</span><span>GitHub</span></a>
     </div>
   </div>
 </section>
 
+
+<!-- ══════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════ -->
 <footer>
   <div class="container footer-inner">
     <span>&copy; 2026 Seyed Navid Elyasi &nbsp;·&nbsp; Chalmers University of Technology</span>
@@ -304,262 +216,19 @@ footer{border-top:1px solid var(--border);padding:2rem 0}
   </div>
 </footer>
 
-<script>
-/* ─────────────────────────────────────────────────────────────
-   ✏️  EDIT YOUR CONTENT HERE
-   ───────────────────────────────────────────────────────────── */
 
-const PUBLICATIONS = [
-  {year:2026,title:"Impact of Delay and Measurement Error on Remote Gate Fidelity in Quantum Data Centers",authors:"S. N. Elyasi, R. Lin, P. Monti",venue:"Optica Quantum 2.0, Glasgow, 2026",url:null},
-  {year:2026,title:"Feasibility of Distributed Measurement-Based Quantum Computing in Quantum Data Centers",authors:"S. N. Elyasi, R. Lin, P. Monti",venue:"Optica Quantum 2.0, Glasgow, 2026",url:null},
-  {year:2026,title:"Emulation of Optically Interconnected Quantum Data Center Topologies for Cost–Fidelity Benchmarking",authors:"S. N. Elyasi, S. M. Ahmadian, R. Lin, P. Monti",venue:"Optical Fiber Communication Conference (OFC), 2026",url:null},
-  {year:2025,title:"Toward Quantum Data Centers: Noise Evaluation of Fiber-Based Interconnects Through Distributed Algorithm Emulation",authors:"S. N. Elyasi, S. M. Ahmadian, J. Li, P. Monti, R. Lin",venue:"European Conference on Optical Communications (ECOC), pp. 1–4, 2025",url:null},
-  {year:2025,title:"A Framework for Quantum Data Center Emulation Using Digital Quantum Computers",authors:"S. N. Elyasi, P. Monti, J. Li, R. Lin",venue:"arXiv:2509.04029, 2025",url:"https://arxiv.org/abs/2509.04029"},
-  {year:2025,title:"Experimental Simulation of Daemonic Work Extraction in Open Quantum Batteries on a Digital Quantum Computer",authors:"S. N. Elyasi, M. A. C. Rossi, M. G. Genoni",venue:"Quantum Science and Technology, 10(2), 025017, 2025",url:null},
-  {year:2025,title:"Waveguide Evanescent Field Fluorescence Microscopy Images of Osteoblast Cells: The Effect of Trypsin and Image Processing Using TrackMate",authors:"A. Hassanzadeh, S. N. Elyasi, S. Salih, S. S. Abdulkareem, S. R. Saeed",venue:"Microscopy Research and Technique, 88(5), 1326–1334, 2025",url:null},
-  {year:2025,title:"Implementing Direct Three-Tangle Measurement of Tripartite GHZ States on IBM Quantum Platforms",authors:"S. N. Elyasi, M. Yahyavi, N. Karimi",venue:"Quantum Information Processing, 24(1), 26, 2025",url:null},
-  {year:2024,title:"Implementation and Measurement of Quantum Entanglement Using IBM Quantum Platforms",authors:"N. Karimi, S. N. Elyasi, M. Yahyavi",venue:"Physica Scripta, 99(4), 045121, 2024",url:null},
-  // ADD: {year:2027,title:"...",authors:"...",venue:"...",url:"https://..."},
-];
+<!-- ══════════════════════════════════════
+     SCRIPTS
+     Load order matters:
+       1. content.js  — defines the data arrays
+       2. bloch.js    — draws the sphere (no data dependency)
+       3. render.js   — renders sections from the data
+       4. nav.js      — handles scroll & mobile nav
+     ══════════════════════════════════════ -->
+<script src="data/content.js"></script>
+<script src="js/bloch.js"></script>
+<script src="js/render.js"></script>
+<script src="js/nav.js"></script>
 
-const PROJECTS = [
-  {type:"Research Tool",name:"OQB Implementation — BatSim",desc:"Full protocol and all visualisations for the open quantum batteries paper. Demonstrates daemonic work extraction on IBM Quantum hardware.",tags:["Python","Qiskit","Jupyter","Open Quantum Systems"],url:"https://github.com/nelyasi/OQB-implementation---Batsim"},
-  {type:"Open Source Fork",name:"mapomatic",desc:"Automatic mapping of compiled quantum circuits to low-noise sub-graphs of real quantum hardware. Forked from the Qiskit Community repository.",tags:["Python","Qiskit","Quantum Hardware","Noise Mitigation"],url:"https://github.com/nelyasi/mapomatic"},
-  {type:"Research Framework",name:"Quantum Data Center Emulator",desc:"A framework for emulating optically-interconnected quantum data center topologies using digital quantum computers, benchmarking cost–fidelity trade-offs.",tags:["Python","Qiskit","Distributed QC","OFC 2026"],url:null},
-  // ADD: {type:"...",name:"...",desc:"...",tags:["..."],url:"https://..."},
-];
-
-const GALLERY = [
-  // To add an image: upload the file next to index.html, then add an entry:
-  // {src:"my-figure.png", caption:"Description of the figure"},
-  {src:null,caption:"Quantum circuit diagram — GHZ state preparation",dirac:"|GHZ⟩"},
-  {src:null,caption:"Noise evaluation — fiber-based interconnects",dirac:"⟨noise|"},
-  {src:null,caption:"Quantum data center topology schematic",dirac:"|QDC⟩"},
-  {src:null,caption:"Daemonic work extraction protocol",dirac:"⟨W_d|"},
-  {src:null,caption:"IBM Quantum hardware results",dirac:"|IBM⟩"},
-  {src:null,caption:"Bloch sphere visualisation",dirac:"|ψ⟩"},
-];
-
-const VIDEOS = [
-  // To add a YouTube talk, find the video ID (the part after ?v= in the URL):
-  // {type:"youtube", videoId:"YOUR_VIDEO_ID", title:"Talk Title", meta:"Conference · 2026"},
-];
-
-/* ─────────────────────────────────────────────────────────────
-   BLOCH SPHERE
-   ───────────────────────────────────────────────────────────── */
-(function(){
-  const cv=document.getElementById('bloch-canvas');
-  if(!cv)return;
-  const c=cv.getContext('2d');
-  const W=500,H=500,ox=250,oy=250,R=185,TX=0.40;
-  let t=0;
-
-  function p3(x,y,z,ry){
-    const x1=x*Math.cos(ry)-z*Math.sin(ry),z1=x*Math.sin(ry)+z*Math.cos(ry);
-    const y2=y*Math.cos(TX)-z1*Math.sin(TX),z2=y*Math.sin(TX)+z1*Math.cos(TX);
-    const s=1/(1+z2*0.15);
-    return{px:ox+x1*R*s,py:oy-y2*R*s};
-  }
-
-  function gc(nx,ny,nz,ry,al,lw){
-    let tx,ty,tz;
-    if(Math.abs(nx)<0.9){tx=0;ty=nz;tz=-ny}else{tx=-nz;ty=0;tz=nx}
-    const tl=Math.hypot(tx,ty,tz);tx/=tl;ty/=tl;tz/=tl;
-    const bx=ny*tz-nz*ty,by=nz*tx-nx*tz,bz=nx*ty-ny*tx;
-    c.beginPath();let f=true;
-    for(let a=0;a<=Math.PI*2+.01;a+=.035){
-      const cs=Math.cos(a),sn=Math.sin(a);
-      const pt=p3(cs*tx+sn*bx,cs*ty+sn*by,cs*tz+sn*bz,ry);
-      f?(c.moveTo(pt.px,pt.py),f=false):c.lineTo(pt.px,pt.py);
-    }
-    c.strokeStyle=`rgba(120,169,255,${al})`;c.lineWidth=lw;c.stroke();
-  }
-
-  function lr(zl,ry,al){
-    const r=Math.sqrt(Math.max(0,1-zl*zl));
-    c.beginPath();let f=true;
-    for(let a=0;a<=Math.PI*2+.01;a+=.04){
-      const pt=p3(Math.cos(a)*r,Math.sin(a)*r,zl,ry);
-      f?(c.moveTo(pt.px,pt.py),f=false):c.lineTo(pt.px,pt.py);
-    }
-    c.strokeStyle=`rgba(120,169,255,${al})`;c.lineWidth=.55;c.stroke();
-  }
-
-  function ax(x,y,z,lb,ry,al,dash){
-    const o=p3(0,0,0,ry),e=p3(x*1.2,y*1.2,z*1.2,ry);
-    c.beginPath();c.moveTo(o.px,o.py);c.lineTo(e.px,e.py);
-    c.strokeStyle=`rgba(120,169,255,${al})`;c.lineWidth=dash?.7:.9;
-    if(dash)c.setLineDash([4,5]);c.stroke();c.setLineDash([]);
-    if(al>0.25){
-      const ang=Math.atan2(e.py-o.py,e.px-o.px);
-      c.beginPath();c.moveTo(e.px,e.py);
-      c.lineTo(e.px-9*Math.cos(ang-.42),e.py-9*Math.sin(ang-.42));
-      c.lineTo(e.px-9*Math.cos(ang+.42),e.py-9*Math.sin(ang+.42));
-      c.closePath();c.fillStyle=`rgba(120,169,255,${al})`;c.fill();
-    }
-    c.fillStyle=`rgba(120,169,255,${Math.min(1,al*1.2)})`;
-    c.font='13px "IBM Plex Mono",monospace';
-    c.fillText(lb,e.px+6,e.py+4);
-  }
-
-  function frame(){
-    c.clearRect(0,0,W,H);
-    const ry=t*0.30;
-
-    // sphere ring
-    c.beginPath();c.arc(ox,oy,R,0,Math.PI*2);
-    c.strokeStyle='rgba(120,169,255,0.20)';c.lineWidth=1;c.stroke();
-
-    // great circles + latitude rings
-    gc(0,1,0,ry,.17,.9);gc(1,0,0,ry,.10,.65);gc(0,0,1,ry,.10,.65);
-    [.5,-.5,.82,-.82].forEach(z=>lr(z,ry,.055));
-
-    // axes
-    ax(0,0,1,'|0⟩',ry,.65,false);ax(0,0,-1,'|1⟩',ry,.28,true);
-    ax(1,0,0,'|+⟩',ry,.28,true);ax(-1,0,0,'|−⟩',ry,.16,true);
-    ax(0,1,0,'|i⟩',ry,.28,true);ax(0,-1,0,'|−i⟩',ry,.16,true);
-
-    // state vector
-    const th=Math.PI/3.8,phi=t*0.60;
-    const sx=Math.sin(th)*Math.cos(phi),sy=Math.sin(th)*Math.sin(phi),sz=Math.cos(th);
-    const o=p3(0,0,0,ry),tip=p3(sx,sy,sz,ry),sh=p3(sx,sy,0,ry);
-
-    // dashed projections
-    c.setLineDash([3,5]);
-    c.beginPath();c.moveTo(tip.px,tip.py);c.lineTo(sh.px,sh.py);
-    c.strokeStyle='rgba(120,169,255,0.13)';c.lineWidth=.9;c.stroke();
-    c.beginPath();c.moveTo(o.px,o.py);c.lineTo(sh.px,sh.py);
-    c.strokeStyle='rgba(120,169,255,0.14)';c.lineWidth=.9;c.stroke();
-    c.setLineDash([]);
-
-    // precession trail
-    c.beginPath();let f=true;
-    for(let i=0;i<=80;i++){
-      const pp=phi-(i/80)*Math.PI*1.6;
-      const pt=p3(Math.sin(th)*Math.cos(pp),Math.sin(th)*Math.sin(pp),sz,ry);
-      const al=(1-i/80)*0.30;
-      if(f){c.moveTo(pt.px,pt.py);f=false;}
-      else{c.lineTo(pt.px,pt.py);c.strokeStyle=`rgba(120,169,255,${al})`;c.lineWidth=1.2;c.stroke();c.beginPath();c.moveTo(pt.px,pt.py);}
-    }
-
-    // shaft — IBM blue with cyan glow
-    c.shadowColor='#33b1ff';c.shadowBlur=12;
-    c.beginPath();c.moveTo(o.px,o.py);c.lineTo(tip.px,tip.py);
-    c.strokeStyle='#78a9ff';c.lineWidth=2.4;c.stroke();
-    c.shadowBlur=0;
-
-    // arrowhead
-    const ang=Math.atan2(tip.py-o.py,tip.px-o.px);
-    c.beginPath();c.moveTo(tip.px,tip.py);
-    c.lineTo(tip.px-11*Math.cos(ang-.38),tip.py-11*Math.sin(ang-.38));
-    c.lineTo(tip.px-11*Math.cos(ang+.38),tip.py-11*Math.sin(ang+.38));
-    c.closePath();c.fillStyle='#78a9ff';c.fill();
-
-    // glow + dot
-    c.beginPath();c.arc(tip.px,tip.py,8,0,Math.PI*2);c.fillStyle='rgba(51,177,255,0.18)';c.fill();
-    c.shadowColor='#33b1ff';c.shadowBlur=14;
-    c.beginPath();c.arc(tip.px,tip.py,4.5,0,Math.PI*2);c.fillStyle='#78a9ff';c.fill();
-    c.shadowBlur=0;
-    c.fillStyle='rgba(120,169,255,0.95)';c.font='bold 13px "IBM Plex Mono",monospace';
-    c.fillText('|ψ⟩',tip.px+9,tip.py-7);
-
-    // origin
-    c.beginPath();c.arc(o.px,o.py,3,0,Math.PI*2);c.fillStyle='rgba(120,169,255,0.35)';c.fill();
-
-    t+=0.010;requestAnimationFrame(frame);
-  }
-  frame();
-})();
-
-/* ─────────────────────────────────────────────────────────────
-   RENDER FUNCTIONS
-   ───────────────────────────────────────────────────────────── */
-function observeFadeUps(){
-  const ob=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');ob.unobserve(x.target);}});},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
-  document.querySelectorAll('.fade-up:not(.visible)').forEach(el=>ob.observe(el));
-}
-
-// Publications
-(function(){
-  const cont=document.getElementById('pub-list');if(!cont)return;
-  function render(yf){
-    cont.innerHTML='';
-    const yrs=[...new Set(PUBLICATIONS.map(p=>p.year))].sort((a,b)=>b-a);
-    let n=PUBLICATIONS.length;
-    yrs.forEach(yr=>{
-      const items=PUBLICATIONS.filter(p=>p.year===yr&&(yf==='all'||p.year===+yf));
-      if(!items.length)return;
-      const ye=document.createElement('div');ye.className='pub-year fade-up';ye.textContent=yr;cont.appendChild(ye);
-      items.forEach(pub=>{
-        const row=document.createElement('div');row.className='pub-row fade-up';
-        row.innerHTML=`<span class="pub-n">[${n--}]</span><div><div class="pub-title">${pub.title}</div><div class="pub-authors">${pub.authors}</div><div class="pub-venue">${pub.venue}</div>${pub.url?`<a href="${pub.url}" class="pub-link" target="_blank">View Publication →</a>`:''}</div>`;
-        cont.appendChild(row);
-      });
-    });
-    observeFadeUps();
-  }
-  render('all');
-  document.querySelectorAll('.pf').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.pf').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.year);}));
-})();
-
-// Projects
-(function(){
-  const g=document.getElementById('proj-grid');if(!g)return;
-  PROJECTS.forEach(p=>{
-    const card=document.createElement('div');card.className='proj-card fade-up';
-    card.innerHTML=`<div class="proj-type">${p.type}</div><div class="proj-name">${p.name}</div><div class="proj-desc">${p.desc}</div><div class="proj-tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>${p.url?`<a href="${p.url}" class="proj-link" target="_blank">View on GitHub →</a>`:'<span class="proj-link" style="color:var(--text-ghost);cursor:default;">Coming soon</span>'}`;
-    g.appendChild(card);
-  });
-  observeFadeUps();
-})();
-
-// Gallery
-(function(){
-  const g=document.getElementById('gal-grid');if(!g)return;
-  const lbx=document.getElementById('lightbox'),li=document.getElementById('lb-img'),lc=document.getElementById('lb-cap');
-  document.getElementById('lb-close').addEventListener('click',()=>lbx.classList.remove('open'));
-  lbx.addEventListener('click',e=>{if(e.target===lbx)lbx.classList.remove('open');});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')lbx.classList.remove('open');});
-  GALLERY.forEach(item=>{
-    const d=document.createElement('div');d.className='gal-item fade-up';
-    if(item.src){
-      d.innerHTML=`<img src="${item.src}" alt="${item.caption}" loading="lazy"/><div class="gal-cap"><p>${item.caption}</p></div>`;
-      d.addEventListener('click',()=>{li.src=item.src;lc.textContent=item.caption;lbx.classList.add('open');});
-    } else {
-      d.innerHTML=`<div class="gal-placeholder"><span class="gal-ket">${item.dirac}</span><span class="gal-label">add image</span></div><div class="gal-cap"><p>${item.caption}</p></div>`;
-    }
-    g.appendChild(d);
-  });
-  observeFadeUps();
-})();
-
-// Videos
-(function(){
-  const g=document.getElementById('vid-grid');if(!g)return;
-  if(!VIDEOS.length){g.innerHTML=`<div class="vid-empty">No videos yet &nbsp;·&nbsp; find <code style="color:var(--gold)">VIDEOS = [</code> in this file and add your talks</div>`;return;}
-  VIDEOS.forEach(v=>{
-    const card=document.createElement('div');card.className='vid-card fade-up';
-    let m='';
-    if(v.type==='youtube')m=`<div class="vid-embed"><iframe src="https://www.youtube.com/embed/${v.videoId}" allowfullscreen loading="lazy" title="${v.title}"></iframe></div>`;
-    else if(v.type==='vimeo')m=`<div class="vid-embed"><iframe src="https://player.vimeo.com/video/${v.videoId}" allowfullscreen loading="lazy" title="${v.title}"></iframe></div>`;
-    else if(v.type==='local')m=`<video controls preload="none" poster="${v.thumb||''}" style="width:100%;display:block;"><source src="${v.src}"></video>`;
-    card.innerHTML=`${m}<div class="vid-info"><div class="vid-title">${v.title}</div><div class="vid-meta">${v.meta}</div></div>`;
-    g.appendChild(card);
-  });
-  observeFadeUps();
-})();
-
-// Nav + scroll
-const bar=document.getElementById('progress-bar');
-window.addEventListener('scroll',()=>{if(bar)bar.style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';});
-document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('nav-mobile').classList.toggle('open'));
-document.querySelectorAll('.nav-mobile a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav-mobile').classList.remove('open')));
-const navAs=document.querySelectorAll('.nav-links a');
-document.querySelectorAll('section[id],header[id]').forEach(s=>{
-  new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)navAs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+x.target.id));});},{threshold:.35}).observe(s);
-});
-window.addEventListener('load',observeFadeUps);
-</script>
 </body>
 </html>

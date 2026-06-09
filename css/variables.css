@@ -1,0 +1,41 @@
+/* ============================================================
+   variables.css  —  Design tokens & CSS custom properties
+   Edit this file to retheme the entire site at once.
+   ============================================================ */
+
+:root {
+  /* ── Backgrounds ── */
+  --bg:       #f8f9fc;
+  --bg-soft:  #eef1f7;
+  --bg-card:  #ffffff;
+
+  /* ── Brand / Accent (IBM Blue) ── */
+  --gold:       #1a56db;
+  --gold-dim:   rgba(26, 86, 219, .55);
+  --gold-ghost: rgba(26, 86, 219, .07);
+
+  /* ── Borders ── */
+  --border:     rgba(26, 86, 219, .12);
+  --border-mid: rgba(26, 86, 219, .24);
+  --border-hi:  rgba(26, 86, 219, .45);
+
+  /* ── Text scale ── */
+  --text:       #1a1a2e;
+  --text-dim:   #4a5568;
+  --text-mute:  #718096;
+  --text-ghost: #a0aec0;
+
+  /* ── Typography ── */
+  --mono:    'IBM Plex Mono', monospace;
+  --serif:   'IBM Plex Serif', Georgia, serif;
+  --display: 'IBM Plex Sans', system-ui, sans-serif;
+
+  /* ── Cyan highlight ── */
+  --cyan:     #0072c6;
+  --cyan-dim: rgba(0, 114, 198, .40);
+
+  /* ── Misc ── */
+  --r:    3px;
+  --ease: .22s ease;
+  --max:  1080px;
+}

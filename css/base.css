@@ -1,0 +1,102 @@
+/* ============================================================
+   base.css  —  Global reset, typography, scrollbar, utilities
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 17px;
+}
+
+body {
+  background:  var(--bg);
+  color:       var(--text);
+  font-family: var(--display);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: opacity var(--ease);
+}
+a:hover { opacity: .72; }
+
+img { max-width: 100%; display: block; }
+
+strong { color: #1a1a2e; font-weight: 500; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar              { width: 5px; }
+::-webkit-scrollbar-track        { background: var(--bg); }
+::-webkit-scrollbar-thumb        { background: var(--border-hi); border-radius: 3px; }
+
+/* ── Layout helpers ── */
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 6rem 0;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Scroll progress bar ── */
+#progress-bar {
+  position: fixed; top: 0; left: 0;
+  height: 2px; width: 0;
+  background: var(--gold);
+  z-index: 999;
+  transition: width .1s linear;
+}
+
+/* ── Section label (e.g. "01 — About") ── */
+.sec-label {
+  font-family:    var(--mono);
+  font-size:      .62rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color:          var(--gold);
+  margin-bottom:  .9rem;
+  font-weight:    500;
+}
+
+/* ── Section heading ── */
+h2 {
+  font-family:  var(--display);
+  font-size:    clamp(1.9rem, 3.5vw, 2.6rem);
+  font-weight:  400;
+  color:        #1a1a2e;
+  line-height:  1.12;
+  margin-bottom: .4rem;
+}
+
+/* ── Dirac notation accent line ── */
+.dirac-accent {
+  font-family:   var(--mono);
+  font-size:     .74rem;
+  color:         rgba(26, 86, 219, .35);
+  margin-bottom: 2.2rem;
+  display:       block;
+}
+
+/* ── Fade-up animation ── */
+.fade-up {
+  opacity:   0;
+  transform: translateY(22px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.fade-up.visible {
+  opacity:   1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  html { font-size: 16px; }
+  section { padding: 4.5rem 0; }
+}

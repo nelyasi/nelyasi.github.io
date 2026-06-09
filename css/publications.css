@@ -1,0 +1,72 @@
+/* ============================================================
+   publications.css  —  Publications list + year filters
+   ============================================================ */
+
+/* ── Filter buttons ── */
+.pub-filters { display: flex; gap: .4rem; margin-bottom: 2.2rem; flex-wrap: wrap; }
+
+.pf {
+  font-family:    var(--mono);
+  font-size:      .62rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding:        .3rem .9rem;
+  border:         1px solid var(--border);
+  background:     none;
+  color:          var(--text-mute);
+  cursor:         pointer;
+  border-radius:  var(--r);
+  transition:     border-color var(--ease), color var(--ease), background var(--ease);
+}
+.pf.active,
+.pf:hover {
+  border-color: var(--gold);
+  color:        var(--gold);
+  background:   var(--gold-ghost);
+}
+
+/* ── Year heading ── */
+.pub-year {
+  font-family:   var(--display);
+  font-size:     1.5rem;
+  color:         var(--cyan);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: .4rem;
+  margin:        2rem 0 1.1rem;
+}
+.pub-year:first-child { margin-top: 0; }
+
+/* ── Publication row ── */
+.pub-row {
+  padding:               1rem 0;
+  border-bottom:         1px solid rgba(26, 86, 219, .07);
+  display:               grid;
+  grid-template-columns: 28px 1fr;
+  gap:                   0 1rem;
+}
+
+.pub-n {
+  font-family: var(--mono);
+  font-size:   .6rem;
+  color:       var(--text-ghost);
+  padding-top: 4px;
+}
+
+.pub-title  { font-size: 1rem; font-weight: 500; color: #1a1a2e; margin-bottom: .2rem; line-height: 1.4; }
+.pub-authors { font-size: .9rem; color: var(--text-dim); margin-bottom: .12rem; }
+.pub-venue   { font-size: .85rem; color: var(--text-mute); font-style: italic; }
+
+.pub-link {
+  display:        inline-block;
+  margin-top:     .45rem;
+  font-family:    var(--mono);
+  font-size:      .6rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding:        .22rem .62rem;
+  border:         1px solid var(--border-mid);
+  color:          var(--gold);
+  border-radius:  var(--r);
+  transition:     background var(--ease);
+}
+.pub-link:hover { background: var(--gold-ghost); opacity: 1; }

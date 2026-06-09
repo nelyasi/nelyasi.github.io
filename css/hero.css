@@ -1,0 +1,123 @@
+/* ============================================================
+   hero.css  —  Full-height hero with Bloch sphere
+   ============================================================ */
+
+#hero {
+  min-height:  100vh;
+  padding-top: 58px;
+  display:     flex;
+  align-items: center;
+  position:    relative;
+  overflow:    hidden;
+  border-top:  none;
+  background:  linear-gradient(135deg, #f0f4ff 0%, #f8f9fc 60%, #eef6ff 100%);
+}
+
+/* Subtle grid overlay */
+.hero-grid {
+  position:         absolute;
+  inset:            0;
+  background-image: linear-gradient(rgba(26,86,219,.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(26,86,219,.04) 1px, transparent 1px);
+  background-size:  58px 58px;
+  pointer-events:   none;
+}
+
+.hero-content {
+  position:   relative;
+  z-index:    2;
+  max-width:  var(--max);
+  margin:     0 auto;
+  padding:    4rem 2rem;
+  flex:       1;
+}
+
+.hero-kicker {
+  font-family:    var(--mono);
+  font-size:      .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color:          var(--gold);
+  margin-bottom:  1.2rem;
+  font-weight:    500;
+}
+
+.hero-name {
+  font-family:   var(--display);
+  font-size:     clamp(3.2rem, 8vw, 6.2rem);
+  font-weight:   300;
+  line-height:   1.04;
+  color:         #1a1a2e;
+  margin-bottom: 1rem;
+}
+.hero-name em { font-style: italic; color: var(--gold); }
+
+.hero-sub {
+  font-size:     1rem;
+  color:         var(--text-dim);
+  margin-bottom: .6rem;
+  letter-spacing: .025em;
+}
+
+.hero-dirac {
+  font-family:   var(--mono);
+  font-size:     .78rem;
+  color:         rgba(26, 86, 219, .38);
+  margin-bottom: 2rem;
+}
+
+/* ── CTA buttons ── */
+.hero-cta { display: flex; gap: .9rem; flex-wrap: wrap; }
+
+.btn-gold {
+  display:        inline-block;
+  padding:        .65rem 1.7rem;
+  background:     var(--gold);
+  color:          #fff;
+  font-family:    var(--mono);
+  font-size:      .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  border-radius:  var(--r);
+  transition:     opacity var(--ease), transform var(--ease);
+  box-shadow:     0 2px 12px rgba(26, 86, 219, .25);
+}
+.btn-gold:hover { opacity: .85; transform: translateY(-1px); }
+
+.btn-outline {
+  display:        inline-block;
+  padding:        .65rem 1.7rem;
+  border:         1px solid var(--border-hi);
+  color:          var(--gold);
+  font-family:    var(--mono);
+  font-size:      .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  border-radius:  var(--r);
+  transition:     border-color var(--ease), color var(--ease), background var(--ease);
+}
+.btn-outline:hover { background: var(--gold-ghost); color: var(--gold); opacity: 1; }
+
+/* ── Bloch sphere container ── */
+.hero-bloch {
+  position:      absolute;
+  right:         2%;
+  top:           50%;
+  transform:     translateY(-50%);
+  width:         min(460px, 44vw);
+  z-index:       1;
+  opacity:       1;
+  background:    radial-gradient(ellipse at 50% 50%, #080d1a 60%, #0a1628 100%);
+  border-radius: 50%;
+  box-shadow:    0 0 80px rgba(26,86,219,.22),
+                 0 0 0 1px rgba(26,86,219,.18),
+                 inset 0 0 60px rgba(0,0,0,.6);
+}
+#bloch-canvas { width: 100%; height: auto; display: block; border-radius: 50%; }
+
+@media (max-width: 860px) {
+  .hero-bloch { width: 38vw; opacity: .3; }
+}
+@media (max-width: 640px) {
+  .hero-bloch { display: none; }
+}
