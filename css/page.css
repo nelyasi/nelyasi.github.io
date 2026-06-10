@@ -1,0 +1,357 @@
+/* ============================================================
+   page.css  —  Shared styles for interior pages (hobbies, electronics)
+   ============================================================ */
+
+/* ── Page Hero ── */
+.page-hero {
+  position:    relative;
+  min-height:  340px;
+  display:     flex;
+  align-items: flex-end;
+  overflow:    hidden;
+  margin-top:  58px; /* navbar height */
+}
+
+.page-hero-bg {
+  position:   absolute;
+  inset:      0;
+  z-index:    0;
+  opacity:    .07;
+  background-size:     cover;
+  background-position: center;
+}
+
+/* Fishing page: subtle water-like gradient lines */
+.hobby-bg {
+  background:
+    repeating-linear-gradient(
+      170deg,
+      transparent,
+      transparent 40px,
+      rgba(26, 86, 219, .15) 40px,
+      rgba(26, 86, 219, .15) 41px
+    ),
+    linear-gradient(180deg, #dbeafe 0%, #e0f2fe 100%);
+  opacity: .18;
+}
+
+/* Electronics page: circuit-board-like grid */
+.electronics-bg {
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(26,86,219,.12) 28px, rgba(26,86,219,.12) 29px),
+    repeating-linear-gradient(90deg, transparent, transparent 28px, rgba(26,86,219,.12) 28px, rgba(26,86,219,.12) 29px),
+    linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+  opacity: .22;
+}
+
+.page-hero-content {
+  position:  relative;
+  z-index:   1;
+  padding:   4rem 2rem 3rem;
+}
+
+.page-hero-kicker {
+  font-family:    var(--mono);
+  font-size:      .62rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color:          var(--gold);
+  margin-bottom:  .7rem;
+}
+
+.page-hero-title {
+  font-family:  var(--display);
+  font-size:    clamp(2.2rem, 5vw, 3.6rem);
+  font-weight:  300;
+  color:        #1a1a2e;
+  line-height:  1.1;
+  margin-bottom:.4rem;
+}
+
+.page-hero-sub {
+  font-family: var(--mono);
+  font-size:   .8rem;
+  color:       var(--text-dim);
+  letter-spacing: .06em;
+}
+
+/* ── Sections ── */
+.page-section {
+  padding:    5.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.alt-section {
+  background: var(--bg-soft);
+}
+
+.intro-para {
+  max-width:   680px;
+  font-size:   1.06rem;
+  color:       var(--text-dim);
+  line-height: 1.8;
+}
+
+/* ── Hobby cards ── */
+.hobby-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap:                   1.2rem;
+  margin-top:            2.5rem;
+}
+
+.hobby-card {
+  background:     var(--bg-card);
+  border:         1px solid var(--border);
+  border-radius:  var(--r);
+  padding:        1.8rem;
+  display:        flex;
+  flex-direction: column;
+  gap:            .6rem;
+  transition:     border-color var(--ease), transform var(--ease), box-shadow var(--ease);
+}
+.hobby-card:hover {
+  border-color: var(--border-hi);
+  transform:    translateY(-3px);
+  box-shadow:   0 10px 34px rgba(26, 86, 219, .09);
+}
+
+.hobby-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: .2rem;
+}
+
+.hobby-card h3 {
+  font-family:  var(--display);
+  font-size:    1.15rem;
+  font-weight:  500;
+  color:        #1a1a2e;
+}
+
+.hobby-card p {
+  font-size:   .91rem;
+  color:       var(--text-dim);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.hobby-tags {
+  display:   flex;
+  flex-wrap: wrap;
+  gap:       .3rem;
+  margin-top:.4rem;
+}
+
+.hobby-tags span {
+  font-family:   var(--mono);
+  font-size:     .58rem;
+  letter-spacing:.08em;
+  text-transform: uppercase;
+  padding:       .2rem .55rem;
+  border:        1px solid var(--border-mid);
+  border-radius: 2px;
+  color:         var(--cyan);
+  background:    var(--gold-ghost);
+}
+
+/* ── Quote ── */
+.hobby-quote {
+  margin-top:  3rem;
+  padding:     1.5rem 2rem;
+  border-left: 3px solid var(--gold-dim);
+  background:  var(--gold-ghost);
+  border-radius: 0 var(--r) var(--r) 0;
+}
+
+.hobby-quote blockquote {
+  font-family:  var(--serif);
+  font-size:    1.02rem;
+  font-style:   italic;
+  color:        var(--text-dim);
+  line-height:  1.75;
+}
+
+/* ── Stat row ── */
+.stat-row {
+  display:   flex;
+  gap:       1.5rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.stat-box {
+  background:    var(--bg-card);
+  border:        1px solid var(--border);
+  border-radius: var(--r);
+  padding:       1.4rem 2rem;
+  text-align:    center;
+  flex:          1;
+  min-width:     140px;
+}
+
+.stat-num {
+  font-family:  var(--mono);
+  font-size:    2rem;
+  font-weight:  500;
+  color:        var(--gold);
+  line-height:  1;
+  margin-bottom:.3rem;
+}
+
+.stat-label {
+  font-family:    var(--mono);
+  font-size:      .62rem;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color:          var(--text-mute);
+}
+
+/* ── Electronics project cards ── */
+.elab-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap:                   1.2rem;
+  margin-top:            2.5rem;
+}
+
+.elab-card {
+  background:     var(--bg-card);
+  border:         1px solid var(--border);
+  border-radius:  var(--r);
+  padding:        1.6rem;
+  display:        flex;
+  flex-direction: column;
+  gap:            .55rem;
+  transition:     border-color var(--ease), transform var(--ease), box-shadow var(--ease);
+}
+.elab-card:hover {
+  border-color: var(--border-hi);
+  transform:    translateY(-3px);
+  box-shadow:   0 10px 34px rgba(26, 86, 219, .09);
+}
+
+.elab-header {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  margin-bottom:   .3rem;
+}
+
+.elab-status {
+  font-family:    var(--mono);
+  font-size:      .58rem;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  padding:        .18rem .6rem;
+  border-radius:  2px;
+  font-weight:    500;
+}
+
+.status-done   { background: rgba(16,185,129,.10); color: #059669; border: 1px solid rgba(16,185,129,.25); }
+.status-active { background: rgba(26, 86,219,.08);  color: var(--gold); border: 1px solid var(--border-mid); }
+.status-idea   { background: rgba(245,158, 11,.10); color: #b45309; border: 1px solid rgba(245,158,11,.25); }
+
+.elab-year {
+  font-family: var(--mono);
+  font-size:   .62rem;
+  color:       var(--text-ghost);
+}
+
+.elab-card h3 {
+  font-family:  var(--display);
+  font-size:    1.1rem;
+  font-weight:  500;
+  color:        #1a1a2e;
+}
+
+.elab-card p {
+  font-size:   .9rem;
+  color:       var(--text-dim);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.elab-tech {
+  display:   flex;
+  flex-wrap: wrap;
+  gap:       .3rem;
+  margin-top:.4rem;
+}
+
+.elab-tech span {
+  font-family:    var(--mono);
+  font-size:      .58rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding:        .2rem .55rem;
+  border:         1px solid var(--border-mid);
+  border-radius:  2px;
+  color:          var(--cyan);
+  background:     var(--gold-ghost);
+}
+
+/* ── Bench grid ── */
+.bench-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap:                   1rem;
+  margin-top:            2.5rem;
+}
+
+.bench-item {
+  background:     var(--bg-card);
+  border:         1px solid var(--border);
+  border-radius:  var(--r);
+  padding:        1.4rem;
+  display:        flex;
+  flex-direction: column;
+  gap:            .4rem;
+  transition:     border-color var(--ease);
+}
+.bench-item:hover { border-color: var(--border-hi); }
+
+.bench-icon { font-size: 1.6rem; line-height: 1; }
+
+.bench-label {
+  font-family: var(--display);
+  font-size:   .95rem;
+  font-weight: 500;
+  color:       #1a1a2e;
+}
+
+.bench-note {
+  font-family: var(--mono);
+  font-size:   .7rem;
+  color:       var(--text-mute);
+  line-height: 1.5;
+}
+
+/* ── Footer ── */
+footer {
+  padding:    2.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  flex-wrap:       wrap;
+  gap:             .5rem;
+  font-family:     var(--mono);
+  font-size:       .66rem;
+  color:           var(--text-ghost);
+  letter-spacing:  .06em;
+}
+
+.footer-dirac { color: rgba(26, 86, 219, .28); }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .page-hero { min-height: 260px; }
+  .page-hero-content { padding: 3rem 1.5rem 2rem; }
+  .hobby-grid, .elab-grid, .bench-grid { grid-template-columns: 1fr; }
+  .stat-row { flex-direction: column; }
+  .footer-inner { flex-direction: column; text-align: center; }
+}

@@ -60,6 +60,23 @@
   opacity: 1;
 }
 
+/* ── Page links (separate pages) ── */
+.nav-page-link {
+  color:         var(--gold) !important;
+  opacity:       .8;
+  border:        1px solid var(--border-mid);
+  padding:       .18rem .6rem !important;
+  border-radius: 2px;
+  transition:    background var(--ease), opacity var(--ease), border-color var(--ease) !important;
+}
+
+.nav-page-link:hover,
+.nav-page-link.active {
+  background:   var(--gold-ghost);
+  border-color: var(--border-hi);
+  opacity:      1 !important;
+}
+
 /* ── Hamburger (mobile) ── */
 .hamburger {
   display:     none;
