@@ -207,7 +207,7 @@ window.FISHING_VIDEOS = [
   // ── ADD a fishing video:
   {
     type:    "youtube",
-    videoId: "vvLjEPZF4U",
+    videoId: "avvLjEPZF4U",
     title:   "My fishing journies in 2025",
     meta:    "2025",
   },
