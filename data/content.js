@@ -153,16 +153,31 @@ window.VIDEOS = [
 // Upload your image to assets/images/ then set src below.
 window.FISHING_PHOTOS = [
   // ── ADD a fishing photo:
-  // {
-  //   src:     "assets/images/fishing-catch-1.jpg",
-  //   caption: "Pike on a spinner, Lake Öxen, May 2025",
-  //   location: "Gothenburg Archipelago",
-  // },
-  // {
-  //   src:     "assets/images/fishing-sunrise.jpg",
-  //   caption: "Early morning session before the lab",
-  //   location: "West Coast, Sweden",
-  // },
+  {
+    src:     "assets/images/Gbg_fish.jpg",
+    caption: "Pike on a Lure, Gothenburg, June 2025",
+    location: "Gothenburg, Sweden",
+  },
+  {
+    src:     "assets/images/Gbg_fish2.jpg",
+    caption: "Pike on a Lure, Gothenburg, June 2025",
+    location: "Gothenburg, Sweden",
+  },
+    {
+    src:     "assets/images/Fishing.jpg",
+    caption: "Boating, Lake Öxen, August 2025",
+    location: "Gothenburg, Sweden",
+  },
+  {
+    src:     "assets/images/Ger_fish.jpg",
+    caption: "Trout fishing in Isar, Germany, June 2025",
+    location: "Munich, Germany",
+  },
+    {
+    src:     "assets/images/Ger_fish2.jpg",
+    caption: "Trout fishing in Isar, Germany, June 2025",
+    location: "Munich, Germany",
+  },
 ];
 
 /* ── Fishing Videos ─────────────────────────────────────────── */
