@@ -116,10 +116,15 @@ window.PROJECTS = [
 window.GALLERY = [
 
 { src: "assets/images/anne.jpeg", caption: "Visiting Anne L'Huillier at the 2025 WACQT May Meeting.", dirac: "Visit" },
+{ src: "assets/images/Peter.jpg", caption: "Visiting Sir Peter Knight at the QNetworks Workshop in Bristol May 2026.", dirac: "Visit" },
+{ src: "assets/images/Sima.jpg", caption: "Visiting Dr. Sima Bahrani at the University of Bristol to work on a collaborative project in 2026.", dirac: "Visit" },
 { src: "assets/images/Lund_Visit.jpg", caption: "Visiting the Quantum Physics Lab at Lund University during the WACQT Lab Course.", dirac: "Visit" },
 { src: "assets/images/Poster_Summer.jpg", caption: "Presenting my research as a poster at the WACQT 2025 Summer School.", dirac: "Poster" },
 { src: "assets/images/Poster_May.jpg", caption: "Presenting my research as a poster at the WACQT 2025 May Meeting.", dirac: "Poster" },
 { src: "assets/images/my_fab.jpg", caption: "Visiting Myfab at the MC2 Department, Chalmers University of Technology.", dirac: "Visit" },
+{ src: "assets/images/ECOC.jpg", caption: "Attending the ECOC 2025 conference in Copenhagen Denmark.", dirac: "Visit" },
+{ src: "assets/images/MC2_Seminar.jpg", caption: "Presenting my research of my MSc degree at the MC2 Department at the Chalmers University of Technology.", dirac: "Visit" },
+{ src: "assets/images/MC2_Lab.jpg", caption: "Visiting Superconducting Quantum Computing Lab at Chalmers University of Technology.", dirac: "Visit" },
 
   // ── ADD a gallery item:
   // { src: "assets/images/my-figure.png", caption: "Figure caption here." },
