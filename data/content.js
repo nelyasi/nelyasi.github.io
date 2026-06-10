@@ -114,7 +114,13 @@ window.PROJECTS = [
 
 /* ── Gallery (main site) ───────────────────────────────────── */
 window.GALLERY = [
-  { src: "assets/images/anne.jpeg", caption: "Visiting Anne L'Huillier in 2025 WACQT may meeting.", dirac: "Visit" },
+
+{ src: "assets/images/anne.jpeg", caption: "Visiting Anne L'Huillier at the 2025 WACQT May Meeting.", dirac: "Visit" },
+{ src: "assets/images/Lund_visit.jpeg", caption: "Visiting the Quantum Physics Lab at Lund University during the WACQT Lab Course.", dirac: "Visit" },
+{ src: "assets/images/Poster_summer.jpeg", caption: "Presenting my research as a poster at the WACQT 2025 Summer School.", dirac: "Poster" },
+{ src: "assets/images/Poster_May.jpeg", caption: "Presenting my research as a poster at the WACQT 2025 May Meeting.", dirac: "Poster" },
+{ src: "assets/images/my_fab.jpeg", caption: "Visiting Myfab at the MC2 Department, Chalmers University of Technology.", dirac: "Visit" },
+
   // ── ADD a gallery item:
   // { src: "assets/images/my-figure.png", caption: "Figure caption here." },
 ];
