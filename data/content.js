@@ -205,12 +205,12 @@ window.FISHING_PHOTOS = [
 // Embed YouTube or Vimeo videos from your fishing trips.
 window.FISHING_VIDEOS = [
   // ── ADD a fishing video:
-  // {
-  //   type:    "youtube",
-  //   videoId: "VIDEO_ID_HERE",
-  //   title:   "Sea trout on a fly rod — Swedish west coast",
-  //   meta:    "June 2025",
-  // },
+  {
+    type:    "youtube",
+    videoId: "vvLjEPZF4U",
+    title:   "My fishing journies in 2025",
+    meta:    "2025",
+  },
 ];
 
 /* ── Fishing info cards ─────────────────────────────────────── */
