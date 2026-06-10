@@ -1,7 +1,13 @@
 /* ============================================================
    data/content.js  —  ✏️  EDIT YOUR CONTENT HERE
    This is the ONLY file you need to touch to update the site.
+   Covers: main site + hobbies page + electronics page
    ============================================================ */
+
+
+/* ══════════════════════════════════════════════════════════════
+   MAIN SITE
+   ══════════════════════════════════════════════════════════════ */
 
 /* ── Publications ──────────────────────────────────────────── */
 window.PUBLICATIONS = [
@@ -106,21 +112,15 @@ window.PROJECTS = [
 ];
 
 
-/* ── Gallery ───────────────────────────────────────────────── */
-// To show a real image: upload the file to assets/images/ next to index.html,
-// then set src: "assets/images/my-figure.png"
+/* ── Gallery (main site) ───────────────────────────────────── */
 window.GALLERY = [
   { src: "assets/images/anne.jpeg", caption: "Visiting Anne L'Huillier in 2025 WACQT may meeting.", dirac: "Visit" },
-
   // ── ADD a gallery item:
-  // { src: "assets/images/my-figure.png", caption: "Figure caption here", dirac: "|fig⟩" },
+  // { src: "assets/images/my-figure.png", caption: "Figure caption here." },
 ];
 
 
-
-/* ── Videos ────────────────────────────────────────────────── */
-// YouTube: find the video ID after ?v= in the URL
-// Vimeo:   find the numeric ID in the URL
+/* ── Videos (main site) ────────────────────────────────────── */
 window.VIDEOS = [
   {
     type:    "youtube",
@@ -141,12 +141,111 @@ window.VIDEOS = [
   //   title:   "Talk Title — Conference 2026",
   //   meta:    "Optica Quantum 2.0 · Glasgow · June 2026",
   // },
-  //
-  // ── ADD a Vimeo talk:
+];
+
+
+/* ══════════════════════════════════════════════════════════════
+   HOBBIES PAGE  (hobbies.html)
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Fishing Photos ─────────────────────────────────────────── */
+// Each item is a photo you've taken out fishing.
+// Upload your image to assets/images/ then set src below.
+window.FISHING_PHOTOS = [
+  // ── ADD a fishing photo:
   // {
-  //   type:    "vimeo",
-  //   videoId: "123456789",
-  //   title:   "Seminar Title",
-  //   meta:    "Chalmers Seminar Series · 2025",
+  //   src:     "assets/images/fishing-catch-1.jpg",
+  //   caption: "Pike on a spinner, Lake Öxen, May 2025",
+  //   location: "Gothenburg Archipelago",
+  // },
+  // {
+  //   src:     "assets/images/fishing-sunrise.jpg",
+  //   caption: "Early morning session before the lab",
+  //   location: "West Coast, Sweden",
+  // },
+];
+
+/* ── Fishing Videos ─────────────────────────────────────────── */
+// Embed YouTube or Vimeo videos from your fishing trips.
+window.FISHING_VIDEOS = [
+  // ── ADD a fishing video:
+  // {
+  //   type:    "youtube",
+  //   videoId: "VIDEO_ID_HERE",
+  //   title:   "Sea trout on a fly rod — Swedish west coast",
+  //   meta:    "June 2025",
+  // },
+];
+
+/* ── Fishing info cards ─────────────────────────────────────── */
+// These cards describe the types of fishing you do.
+window.FISHING_SPOTS = [
+  {
+    icon:    "🎣",
+    title:   "Freshwater Fishing",
+    desc:    "Seeking out lakes and rivers — chasing perch, pike, and trout in the Swedish countryside. There is a particular satisfaction in reading the water, choosing the right lure, and waiting.",
+    tags:    ["Lure Fishing", "Fly Fishing", "Spin Casting"],
+  },
+  {
+    icon:    "🌊",
+    title:   "Sea Fishing",
+    desc:    "Saltwater trips along the west coast of Sweden. The combination of tides, weather, and fish behaviour makes every session a small puzzle — not unlike debugging a quantum simulation.",
+    tags:    ["Saltwater", "Shore Fishing", "Boat Trips"],
+  },
+  {
+    icon:    "🗺️",
+    title:   "Exploring New Spots",
+    desc:    "Part of the joy is the hunt for new water. Maps, local knowledge, and a good pair of boots are the tools of the trade. Gothenburg and its archipelago offer endless variety.",
+    tags:    ["Gothenburg", "Archipelago", "Scouting"],
+  },
+  // ── ADD a fishing card:
+  // {
+  //   icon:  "🏕️",
+  //   title: "Night Fishing",
+  //   desc:  "Carp and catfish come alive after dark. Bivvy, bite alarms, and a flask of coffee.",
+  //   tags:  ["Carp", "Night Sessions", "Bite Alarms"],
+  // },
+];
+
+
+/* ══════════════════════════════════════════════════════════════
+   ELECTRONICS PAGE  (electronics.html)
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Blog Posts ─────────────────────────────────────────────── */
+// Each post can contain text, images, and a YouTube/Vimeo video.
+// Posts are shown newest-first.
+window.ELECTRONICS_POSTS = [
+  // ── ADD a blog post (copy and uncomment this template):
+  // {
+  //   date:    "2025-06-01",        // YYYY-MM-DD format
+  //   title:   "Building an ESP32 Weather Station",
+  //   tags:    ["ESP32", "C++", "BME280", "OLED"],
+  //   // Text: each string in the array becomes a paragraph.
+  //   text: [
+  //     "I've been meaning to build a low-power weather logger for the balcony for a while. The ESP32 wakes every 10 minutes, reads temperature, humidity, and pressure from a BME280, and pushes the data to a local MQTT broker over Wi-Fi.",
+  //     "The trickiest part was getting deep-sleep current low enough for the LiPo + solar setup to actually be self-sustaining in Swedish winter light levels. Spoiler: it required disabling the Wi-Fi PA and tuning the wakeup timer carefully.",
+  //   ],
+  //   // Images: upload files to assets/images/ and list them here.
+  //   images: [
+  //     { src: "assets/images/esp32-weather-pcb.jpg", caption: "The custom PCB before soldering the SMD passives." },
+  //     { src: "assets/images/esp32-weather-case.jpg", caption: "Finished unit in its 3D-printed weatherproof enclosure." },
+  //   ],
+  //   // Video: paste a YouTube or Vimeo video, or set to null to skip.
+  //   video: { type: "youtube", videoId: "VIDEO_ID_HERE", title: "ESP32 Weather Station Demo" },
+  //   // video: null,
+  // },
+  //
+  // ── Another example — text-only post, no images or video:
+  // {
+  //   date:    "2025-03-14",
+  //   title:   "First PCB from KiCad to JLCPCB",
+  //   tags:    ["KiCad", "PCB Fab", "SMD"],
+  //   text: [
+  //     "Placed my first PCB order at JLCPCB after two evenings in KiCad. The process was smoother than expected — Gerber export, upload, and 5 boards arrived in 10 days for less than a coffee.",
+  //     "Main lesson: double-check footprint pad sizes against your actual component datasheets. The 0402 pads I picked from the library were slightly narrow for the BME280 variant I had in hand.",
+  //   ],
+  //   images: [],
+  //   video: null,
   // },
 ];

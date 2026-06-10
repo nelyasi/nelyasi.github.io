@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hobbies | Seyed Navid Elyasi</title>
-  <meta name="description" content="Fishing and sport hobbies of Seyed Navid Elyasi — life outside the lab."/>
+  <title>Fishing | Seyed Navid Elyasi</title>
+  <meta name="description" content="Fishing hobby of Seyed Navid Elyasi — out on the water in Sweden."/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -27,8 +27,8 @@
       <li><a href="index.html#publications">Publications</a></li>
       <li><a href="index.html#projects">Projects</a></li>
       <li><a href="index.html#contact">Contact</a></li>
-      <li><a href="hobbies.html" class="active">Hobbies</a></li>
-      <li><a href="electronics.html">Electronics</a></li>
+      <li><a href="hobbies.html" class="nav-page-link active">Fishing</a></li>
+      <li><a href="electronics.html" class="nav-page-link">Electronics</a></li>
     </ul>
     <button class="hamburger" id="hamburger">&#9776;</button>
   </div>
@@ -37,115 +37,74 @@
     <li><a href="index.html#publications">Publications</a></li>
     <li><a href="index.html#projects">Projects</a></li>
     <li><a href="index.html#contact">Contact</a></li>
-    <li><a href="hobbies.html" class="active">Hobbies</a></li>
+    <li><a href="hobbies.html">Fishing</a></li>
     <li><a href="electronics.html">Electronics</a></li>
   </ul>
 </nav>
 
+
 <!-- ── PAGE HERO ── -->
 <header class="page-hero">
+  <div class="page-hero-bg hobby-bg"></div>
   <div class="page-hero-content container">
     <div class="page-hero-kicker">Life Outside the Lab</div>
-    <h1 class="page-hero-title">Hobbies &amp; Sport</h1>
-    <p class="page-hero-sub">Fishing &nbsp;·&nbsp; Physical Training &nbsp;·&nbsp; Outdoor Life</p>
+    <h1 class="page-hero-title">Fishing</h1>
+    <p class="page-hero-sub">Freshwater &nbsp;·&nbsp; Sea Fishing &nbsp;·&nbsp; Swedish Archipelago</p>
   </div>
-  <div class="page-hero-bg hobby-bg"></div>
 </header>
 
-<!-- ── FISHING ── -->
+
+<!-- ══════════════════════════
+     ABOUT FISHING
+     ══════════════════════════ -->
 <section class="page-section">
   <div class="container">
-    <div class="sec-label">01 &mdash; Fishing</div>
-    <h2>Out on the Water</h2>
+    <div class="sec-label">01 &mdash; Out on the Water</div>
+    <h2>The Other Kind of Patience</h2>
     <p class="dirac-accent">patience → strike → release &nbsp;·&nbsp; where the mind becomes quiet</p>
 
-    <div class="hobby-grid">
-      <div class="hobby-card fade-up">
-        <div class="hobby-icon">🎣</div>
-        <h3>Freshwater Fishing</h3>
-        <p>Seeking out lakes and rivers — chasing perch, pike, and trout in the Swedish countryside. There's a particular satisfaction in reading the water, choosing the right lure, and waiting.</p>
-        <div class="hobby-tags">
-          <span>Lure Fishing</span><span>Fly Fishing</span><span>Spin Casting</span>
-        </div>
-      </div>
-
-      <div class="hobby-card fade-up">
-        <div class="hobby-icon">🌊</div>
-        <h3>Sea Fishing</h3>
-        <p>Saltwater trips along the west coast of Sweden. The combination of tides, weather, and fish behaviour makes every session a small puzzle — not unlike debugging a quantum simulation.</p>
-        <div class="hobby-tags">
-          <span>Saltwater</span><span>Shore Fishing</span><span>Boat Trips</span>
-        </div>
-      </div>
-
-      <div class="hobby-card fade-up">
-        <div class="hobby-icon">🗺️</div>
-        <h3>Exploring New Spots</h3>
-        <p>Part of the joy is the hunt for new water. Maps, local knowledge, and a good pair of boots are the tools of the trade. Gothenburg and its archipelago offer endless variety.</p>
-        <div class="hobby-tags">
-          <span>Gothenburg</span><span>Archipelago</span><span>Scouting</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="hobby-quote">
-      <blockquote>"Give a man a fish and you feed him for a day. Teach a man to fish and you feed him for a lifetime — but first, he learns to sit still and think."</blockquote>
-    </div>
+    <!-- Cards rendered from FISHING_SPOTS in content.js -->
+    <div class="hobby-grid" id="fishing-spots"></div>
   </div>
 </section>
 
-<!-- ── SPORT ── -->
-<section class="page-section alt-section">
+
+<!-- ══════════════════════════
+     PHOTO GALLERY
+     ══════════════════════════ -->
+<section class="page-section alt-section" id="fishing-photo-section">
   <div class="container">
-    <div class="sec-label">02 &mdash; Sport</div>
-    <h2>Physical Training</h2>
-    <p class="dirac-accent">⟨body|motion⟩ &nbsp;·&nbsp; energy, discipline, and clearing the mind</p>
+    <div class="sec-label">02 &mdash; Gallery</div>
+    <h2>From the Water</h2>
+    <p class="dirac-accent">moments captured &nbsp;·&nbsp; add photos via <code>FISHING_PHOTOS</code> in content.js</p>
 
-    <div class="hobby-grid">
-      <div class="hobby-card fade-up">
-        <div class="hobby-icon">🏋️</div>
-        <h3>Strength Training</h3>
-        <p>Regular weight training to build and maintain physical resilience. The discipline of progressive overload maps neatly onto the scientific method — small, measurable improvements over time.</p>
-        <div class="hobby-tags">
-          <span>Weightlifting</span><span>Calisthenics</span><span>Progressive Overload</span>
-        </div>
-      </div>
+    <!-- Photos rendered from FISHING_PHOTOS in content.js -->
+    <div class="gal-grid" id="fishing-photos"></div>
+  </div>
 
-      <div class="hobby-card fade-up">
-        <div class="hobby-icon">🏃</div>
-        <h3>Running &amp; Endurance</h3>
-        <p>Trail running through Gothenburg's parks and coastline. Running is where many of the best research ideas surface — there's something about steady rhythmic motion that unlocks thinking.</p>
-        <div class="hobby-tags">
-          <span>Trail Running</span><span>Endurance</span><span>Outdoor Cardio</span>
-        </div>
-      </div>
-
-      <div class="hobby-card fade-up">
-        <div class="hobby-icon">⛷️</div>
-        <h3>Winter Sports</h3>
-        <p>Growing up with access to the mountains left a deep love for skiing and winter activities. Scandinavian winters are made to be embraced, not endured.</p>
-        <div class="hobby-tags">
-          <span>Skiing</span><span>Winter Hiking</span><span>Nordic</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="stat-row">
-      <div class="stat-box">
-        <div class="stat-num">4×</div>
-        <div class="stat-label">gym sessions per week</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">∞</div>
-        <div class="stat-label">patience on the water</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">0°C</div>
-        <div class="stat-label">minimum winter threshold</div>
-      </div>
-    </div>
+  <!-- Lightbox -->
+  <div class="lightbox" id="fishing-lightbox">
+    <button class="lb-close" id="fl-close">&times;</button>
+    <img id="fl-img" src="" alt=""/>
+    <p id="fl-cap"></p>
   </div>
 </section>
+
+
+<!-- ══════════════════════════
+     VIDEOS
+     ══════════════════════════ -->
+<section class="page-section">
+  <div class="container">
+    <div class="sec-label">03 &mdash; Videos</div>
+    <h2>On Film</h2>
+    <p class="dirac-accent">trips, catches, and time on the water &nbsp;·&nbsp; add via <code>FISHING_VIDEOS</code> in content.js</p>
+
+    <!-- Videos rendered from FISHING_VIDEOS in content.js -->
+    <div class="vid-grid" id="fishing-videos"></div>
+  </div>
+</section>
+
 
 <!-- ── FOOTER ── -->
 <footer>
@@ -155,24 +114,8 @@
   </div>
 </footer>
 
-<script>
-// Progress bar
-window.addEventListener('scroll', () => {
-  const el = document.getElementById('progress-bar');
-  const p = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-  el.style.width = Math.min(p * 100, 100) + '%';
-});
-
-// Hamburger
-document.getElementById('hamburger').addEventListener('click', () => {
-  document.getElementById('nav-mobile').classList.toggle('open');
-});
-
-// Fade-up observer
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-</script>
+<script src="data/content.js"></script>
+<script src="js/render-pages.js"></script>
+<script src="js/nav.js"></script>
 </body>
 </html>

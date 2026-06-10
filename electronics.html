@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Electronics Projects | Seyed Navid Elyasi</title>
-  <meta name="description" content="Electronic hobby projects by Seyed Navid Elyasi — microcontrollers, PCB design, embedded systems, and tinkering."/>
+  <title>Electronics | Seyed Navid Elyasi</title>
+  <meta name="description" content="Electronics hobby projects and build blog by Seyed Navid Elyasi."/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -27,8 +27,8 @@
       <li><a href="index.html#publications">Publications</a></li>
       <li><a href="index.html#projects">Projects</a></li>
       <li><a href="index.html#contact">Contact</a></li>
-      <li><a href="hobbies.html">Hobbies</a></li>
-      <li><a href="electronics.html" class="active">Electronics</a></li>
+      <li><a href="hobbies.html" class="nav-page-link">Fishing</a></li>
+      <li><a href="electronics.html" class="nav-page-link active">Electronics</a></li>
     </ul>
     <button class="hamburger" id="hamburger">&#9776;</button>
   </div>
@@ -37,157 +37,53 @@
     <li><a href="index.html#publications">Publications</a></li>
     <li><a href="index.html#projects">Projects</a></li>
     <li><a href="index.html#contact">Contact</a></li>
-    <li><a href="hobbies.html">Hobbies</a></li>
-    <li><a href="electronics.html" class="active">Electronics</a></li>
+    <li><a href="hobbies.html">Fishing</a></li>
+    <li><a href="electronics.html">Electronics</a></li>
   </ul>
 </nav>
 
+
 <!-- ── PAGE HERO ── -->
 <header class="page-hero">
+  <div class="page-hero-bg electronics-bg"></div>
   <div class="page-hero-content container">
     <div class="page-hero-kicker">Hardware &amp; Making</div>
-    <h1 class="page-hero-title">Electronics Projects</h1>
-    <p class="page-hero-sub">Microcontrollers &nbsp;·&nbsp; Embedded Systems &nbsp;·&nbsp; PCB Design &nbsp;·&nbsp; Tinkering</p>
+    <h1 class="page-hero-title">Electronics</h1>
+    <p class="page-hero-sub">Microcontrollers &nbsp;·&nbsp; PCB Design &nbsp;·&nbsp; Embedded Systems &nbsp;·&nbsp; Build Blog</p>
   </div>
-  <div class="page-hero-bg electronics-bg"></div>
 </header>
 
-<!-- ── INTRO ── -->
+
+<!-- ══════════════════════════
+     INTRO
+     ══════════════════════════ -->
 <section class="page-section">
   <div class="container">
     <div class="sec-label">00 &mdash; Background</div>
     <h2>Where it all started</h2>
-    <p class="dirac-accent">C/C++ → microcontroller → motion &nbsp;·&nbsp; the original loop that hooked me on computers</p>
-    <p class="intro-para">Long before quantum mechanics, there were microcontrollers. Programming embedded systems in C and C++ as a teenager is what first made computing feel tangible and real. These hobby projects are where that curiosity still lives — physical electronics that you can hold, break, and fix.</p>
+    <p class="dirac-accent">C/C++ → microcontroller → motion &nbsp;·&nbsp; the original loop that hooked me on computing</p>
+    <p class="intro-para">
+      Long before quantum mechanics, there were microcontrollers. Programming embedded systems in C and C++ as a teenager is what first made computing feel tangible and real.
+      These hobby projects are where that curiosity still lives — physical electronics you can hold, break, and fix.
+    </p>
   </div>
 </section>
 
-<!-- ── PROJECTS ── -->
+
+<!-- ══════════════════════════
+     BLOG FEED
+     ══════════════════════════ -->
 <section class="page-section alt-section">
   <div class="container">
-    <div class="sec-label">01 &mdash; Projects</div>
-    <h2>Fun Build Log</h2>
-    <p class="dirac-accent">Û|idea⟩ → |prototype⟩ → |working thing⟩</p>
+    <div class="sec-label">01 &mdash; Build Blog</div>
+    <h2>Project Posts</h2>
+    <p class="dirac-accent">Û|idea⟩ → |prototype⟩ → |post⟩ &nbsp;·&nbsp; add posts via <code>ELECTRONICS_POSTS</code> in content.js</p>
 
-    <div class="elab-grid">
-
-      <div class="elab-card fade-up">
-        <div class="elab-header">
-          <div class="elab-status status-done">Completed</div>
-          <div class="elab-year">Early work</div>
-        </div>
-        <h3>Line-Following Robot</h3>
-        <p>The project that started everything. A two-wheeled robot that reads an IR sensor array and uses a PID controller to follow a black line on white paper. Built with an AVR microcontroller, written in pure C.</p>
-        <div class="elab-tech">
-          <span>AVR</span><span>C</span><span>PID Control</span><span>IR Sensors</span><span>PWM Motors</span>
-        </div>
-      </div>
-
-      <div class="elab-card fade-up">
-        <div class="elab-header">
-          <div class="elab-status status-done">Completed</div>
-          <div class="elab-year">Ongoing</div>
-        </div>
-        <h3>ESP32 Weather Station</h3>
-        <p>A low-power ESP32-based station measuring temperature, humidity, and atmospheric pressure. Data is logged over Wi-Fi to a local server and visualised with a small OLED display. Runs on a LiPo cell with solar top-up.</p>
-        <div class="elab-tech">
-          <span>ESP32</span><span>C++</span><span>BME280</span><span>OLED</span><span>MQTT</span><span>Solar</span>
-        </div>
-      </div>
-
-      <div class="elab-card fade-up">
-        <div class="elab-header">
-          <div class="elab-status status-active">Active</div>
-          <div class="elab-year">2024–</div>
-        </div>
-        <h3>Custom PCB Development</h3>
-        <p>Designing and fabricating custom PCBs for various sensor and control applications. Working through KiCad for schematic capture and layout. A healthy mix of through-hole nostalgia and SMD modern practice.</p>
-        <div class="elab-tech">
-          <span>KiCad</span><span>SMD</span><span>PCB Fab</span><span>STM32</span><span>Soldering</span>
-        </div>
-      </div>
-
-      <div class="elab-card fade-up">
-        <div class="elab-header">
-          <div class="elab-status status-active">Active</div>
-          <div class="elab-year">2025–</div>
-        </div>
-        <h3>Quantum-Inspired LED Art</h3>
-        <p>An addressable LED matrix driven by a Raspberry Pi Pico W that visualises quantum state evolution in real time — Bloch sphere animations, density matrix colour maps, and Wigner functions. Where research and making overlap.</p>
-        <div class="elab-tech">
-          <span>RP2040</span><span>WS2812B</span><span>MicroPython</span><span>NumPy</span><span>QuTiP</span>
-        </div>
-      </div>
-
-      <div class="elab-card fade-up">
-        <div class="elab-header">
-          <div class="elab-status status-idea">Planned</div>
-          <div class="elab-year">Upcoming</div>
-        </div>
-        <h3>Fishing Bite Alarm System</h3>
-        <p>A wireless bite alarm for carp fishing nights. Multiple rod sensors communicate via LoRa to a base unit that plays different tones and logs events. A perfect excuse to combine two hobbies.</p>
-        <div class="elab-tech">
-          <span>LoRa</span><span>Arduino</span><span>Piezo Sensor</span><span>Li-Ion</span>
-        </div>
-      </div>
-
-      <div class="elab-card fade-up">
-        <div class="elab-header">
-          <div class="elab-status status-done">Completed</div>
-          <div class="elab-year">2023</div>
-        </div>
-        <h3>FPGA Signal Processing</h3>
-        <p>An academic project that became a hobby obsession — implementing a basic FFT pipeline on an Artix-7 FPGA. The experience of thinking in hardware description language rewired how I think about parallel computing.</p>
-        <div class="elab-tech">
-          <span>VHDL</span><span>Artix-7</span><span>FFT</span><span>Vivado</span><span>UART</span>
-        </div>
-      </div>
-
-    </div>
+    <!-- Blog posts rendered from ELECTRONICS_POSTS in content.js -->
+    <div id="electronics-feed"></div>
   </div>
 </section>
 
-<!-- ── TOOLS & BENCH ── -->
-<section class="page-section">
-  <div class="container">
-    <div class="sec-label">02 &mdash; The Bench</div>
-    <h2>Tools &amp; Equipment</h2>
-    <p class="dirac-accent">a workbench is a hypothesis-testing machine</p>
-
-    <div class="bench-grid">
-      <div class="bench-item fade-up">
-        <div class="bench-icon">🔬</div>
-        <div class="bench-label">Oscilloscope</div>
-        <div class="bench-note">Rigol DS1054Z — the workhorse</div>
-      </div>
-      <div class="bench-item fade-up">
-        <div class="bench-icon">⚡</div>
-        <div class="bench-label">Power Supply</div>
-        <div class="bench-note">Bench PSU with current limiting</div>
-      </div>
-      <div class="bench-item fade-up">
-        <div class="bench-icon">🔧</div>
-        <div class="bench-label">Soldering</div>
-        <div class="bench-note">Hakko FX-888D — precise temperature control</div>
-      </div>
-      <div class="bench-item fade-up">
-        <div class="bench-icon">📡</div>
-        <div class="bench-label">Logic Analyser</div>
-        <div class="bench-note">Saleae Logic 8 — for protocol debugging</div>
-      </div>
-      <div class="bench-item fade-up">
-        <div class="bench-icon">🖥️</div>
-        <div class="bench-label">Dev Boards</div>
-        <div class="bench-note">ESP32, RP2040, STM32, AVR collection</div>
-      </div>
-      <div class="bench-item fade-up">
-        <div class="bench-icon">📐</div>
-        <div class="bench-label">PCB Design</div>
-        <div class="bench-note">KiCad 8 — open source, excellent</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ── FOOTER ── -->
 <footer>
@@ -197,21 +93,8 @@
   </div>
 </footer>
 
-<script>
-window.addEventListener('scroll', () => {
-  const el = document.getElementById('progress-bar');
-  const p = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-  el.style.width = Math.min(p * 100, 100) + '%';
-});
-
-document.getElementById('hamburger').addEventListener('click', () => {
-  document.getElementById('nav-mobile').classList.toggle('open');
-});
-
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-</script>
+<script src="data/content.js"></script>
+<script src="js/render-pages.js"></script>
+<script src="js/nav.js"></script>
 </body>
 </html>
