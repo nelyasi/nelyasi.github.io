@@ -122,6 +122,9 @@ window.GALLERY = [
 { src: "assets/images/Poster_Summer.jpg", caption: "Presenting my research as a poster at the WACQT 2025 Summer School.", dirac: "Poster" },
 { src: "assets/images/Poster_May.jpg", caption: "Presenting my research as a poster at the WACQT 2025 May Meeting.", dirac: "Poster" },
 { src: "assets/images/my_fab.jpg", caption: "Visiting Myfab at the MC2 Department, Chalmers University of Technology.", dirac: "Visit" },
+{ src: "assets/images/ECOC.jpg", caption: "Attending the ECOC 2025 conference in Copenhagen Denmark.", dirac: "Visit" },
+{ src: "assets/images/MC2_Seminar.jpg", caption: "Presenting my research of my MSc degree at the MC2 Department at the Chalmers University of Technology.", dirac: "Visit" },
+{ src: "assets/images/MC2_Lab.jpg", caption: "Visiting Superconducting Quantum Computing Lab at Chalmers University of Technology.", dirac: "Visit" },
 
   // ── ADD a gallery item:
   // { src: "assets/images/my-figure.png", caption: "Figure caption here." },
