@@ -116,8 +116,8 @@ window.PROJECTS = [
 window.GALLERY = [
 
 { src: "assets/images/anne.jpeg", caption: "Visiting Anne L'Huillier at the 2025 WACQT May Meeting.", dirac: "Visit" },
-{ src: "assets/images/Lund_visit.jpg", caption: "Visiting the Quantum Physics Lab at Lund University during the WACQT Lab Course.", dirac: "Visit" },
-{ src: "assets/images/Poster_summer.jpg", caption: "Presenting my research as a poster at the WACQT 2025 Summer School.", dirac: "Poster" },
+{ src: "assets/images/Lund_Visit.jpg", caption: "Visiting the Quantum Physics Lab at Lund University during the WACQT Lab Course.", dirac: "Visit" },
+{ src: "assets/images/Poster_Summer.jpg", caption: "Presenting my research as a poster at the WACQT 2025 Summer School.", dirac: "Poster" },
 { src: "assets/images/Poster_May.jpg", caption: "Presenting my research as a poster at the WACQT 2025 May Meeting.", dirac: "Poster" },
 { src: "assets/images/my_fab.jpg", caption: "Visiting Myfab at the MC2 Department, Chalmers University of Technology.", dirac: "Visit" },
 
