@@ -178,6 +178,16 @@ window.FISHING_PHOTOS = [
     caption: "Trout fishing in Isar, Germany, June 2025",
     location: "Munich, Germany",
   },
+      {
+    src:     "assets/images/Lak.jpg",
+    caption: "Fishing at Lake Öxen, August 2025",
+    location: "Gothenburg, Sweden",
+  },
+        {
+    src:     "assets/images/Fishes.jpg",
+    caption: "Fishing at Gothenburg Harbour, July 2025",
+    location: "Gothenburg, Sweden",
+  },
 ];
 
 /* ── Fishing Videos ─────────────────────────────────────────── */
