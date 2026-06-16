@@ -117,6 +117,7 @@ window.GALLERY = [
 
 { src: "assets/images/anne.jpeg", caption: "Visiting Anne L'Huillier at the 2025 WACQT May Meeting.", dirac: "Visit" },
 { src: "assets/images/Peter.jpg", caption: "Visiting Sir Peter Knight at the QNetworks Workshop in Bristol May 2026.", dirac: "Visit" },
+{ src: "assets/images/Quantum20.jpg", caption: "Presenting at the Quantum 2020 conference.", dirac: "Presentation" },
 { src: "assets/images/Sima.jpg", caption: "Visiting Dr. Sima Bahrani at the University of Bristol to work on a collaborative project in 2026.", dirac: "Visit" },
 { src: "assets/images/Lund_Visit.jpg", caption: "Visiting the Quantum Physics Lab at Lund University during the WACQT Lab Course.", dirac: "Visit" },
 { src: "assets/images/Poster_Summer.jpg", caption: "Presenting my research as a poster at the WACQT 2025 Summer School.", dirac: "Poster" },
