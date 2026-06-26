@@ -157,6 +157,24 @@ window.VIDEOS = [
 ];
 
 
+/* ── Peer Review (journals + conferences) ──────────────────── */
+window.REVIEWS = {
+  journals: [
+    { name: "Advanced Quantum Technologies",                              publisher: "Wiley" },
+    { name: "IEEE Journal on Selected Areas in Communications (JSAC)",    publisher: "IEEE" },
+    { name: "Discover Networks",                                          publisher: "Springer Nature" },
+    // ── ADD a journal you review for:
+    // { name: "Journal Name", publisher: "Publisher" },
+  ],
+  conferences: [
+    { name: "ONDM 2026",          full: "Int. Conference on Optical Network Design and Modelling" },
+    { name: "IEEE GLOBECOM 2026", full: "IEEE Global Communications Conference" },
+    // ── ADD a conference you review for:
+    // { name: "Conference 2027", full: "Full conference name" },
+  ],
+};
+
+
 /* ══════════════════════════════════════════════════════════════
    HOBBIES PAGE  (hobbies.html)
    ══════════════════════════════════════════════════════════════ */

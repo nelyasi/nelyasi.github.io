@@ -172,3 +172,36 @@ function observeFadeUps() {
 
   observeFadeUps();
 })();
+
+
+/* ── Peer Review ────────────────────────────────────────────── */
+(function () {
+  const cont = document.getElementById('review-list');
+  if (!cont || typeof REVIEWS === 'undefined') return;
+
+  function group(label, items, line2Key) {
+    if (!items || !items.length) return;
+
+    const head = document.createElement('div');
+    head.className = 'rev-group fade-up';
+    head.textContent = label;
+    cont.appendChild(head);
+
+    const grid = document.createElement('div');
+    grid.className = 'rev-grid';
+    items.forEach(it => {
+      const card = document.createElement('div');
+      card.className = 'rev-card fade-up';
+      card.innerHTML = `
+        <div class="rev-name">${it.name}</div>
+        <div class="rev-sub">${it[line2Key] || ''}</div>`;
+      grid.appendChild(card);
+    });
+    cont.appendChild(grid);
+  }
+
+  group('Journals',    REVIEWS.journals,    'publisher');
+  group('Conferences', REVIEWS.conferences, 'full');
+
+  observeFadeUps();
+})();
