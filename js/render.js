@@ -187,17 +187,16 @@ function observeFadeUps() {
     head.textContent = label;
     cont.appendChild(head);
 
-    const grid = document.createElement('div');
-    grid.className = 'rev-grid';
+    const ul = document.createElement('ul');
+    ul.className = 'rev-list fade-up';
     items.forEach(it => {
-      const card = document.createElement('div');
-      card.className = 'rev-card fade-up';
-      card.innerHTML = `
-        <div class="rev-name">${it.name}</div>
-        <div class="rev-sub">${it[line2Key] || ''}</div>`;
-      grid.appendChild(card);
+      const li = document.createElement('li');
+      li.innerHTML =
+        `<span class="rev-name">${it.name}</span>` +
+        (it[line2Key] ? `<span class="rev-sub">${it[line2Key]}</span>` : '');
+      ul.appendChild(li);
     });
-    cont.appendChild(grid);
+    cont.appendChild(ul);
   }
 
   group('Journals',    REVIEWS.journals,    'publisher');

@@ -13,42 +13,45 @@
 }
 .rev-group:first-child { margin-top: 0; }
 
-/* ── Card grid ── */
-.rev-grid {
-  display:               grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap:                   1.1rem;
-  margin-bottom:         1rem;
+/* ── Bulleted list ── */
+.rev-list {
+  list-style: none;
+  margin:     0 0 .5rem;
+  padding:    0;
 }
 
-.rev-card {
-  background:    var(--bg-card);
-  border:        1px solid var(--border);
-  border-left:   3px solid var(--gold-dim);
-  border-radius: var(--r);
-  padding:       1.2rem 1.4rem;
-  transition:    border-color var(--ease), transform var(--ease), box-shadow var(--ease);
+.rev-list li {
+  position:      relative;
+  padding:       .55rem 0 .55rem 1.5rem;
+  border-bottom: 1px solid rgba(26, 86, 219, .07);
+  line-height:   1.5;
 }
-.rev-card:hover {
-  border-color:      var(--border-hi);
-  border-left-color: var(--gold);
-  transform:         translateY(-2px);
-  box-shadow:        0 8px 30px rgba(26, 86, 219, .10);
+
+/* Custom bullet in the brand accent colour */
+.rev-list li::before {
+  content:     "▹";
+  position:    absolute;
+  left:        0;
+  top:         .55rem;
+  color:       var(--gold);
+  font-size:   .95rem;
 }
 
 .rev-name {
-  font-family:  var(--display);
-  font-size:    1.05rem;
-  font-weight:  500;
-  color:        #1a1a2e;
-  line-height:  1.3;
-  margin-bottom: .3rem;
+  font-size:   1rem;
+  font-weight: 500;
+  color:       #1a1a2e;
 }
 
 .rev-sub {
   font-family:    var(--mono);
   font-size:      .62rem;
-  letter-spacing: .08em;
+  letter-spacing: .06em;
   text-transform: uppercase;
   color:          var(--text-mute);
+  margin-left:    .55rem;
+}
+
+@media (max-width: 640px) {
+  .rev-sub { display: block; margin-left: 0; margin-top: .15rem; }
 }
