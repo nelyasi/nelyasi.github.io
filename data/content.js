@@ -220,7 +220,7 @@ window.FISHING_PHOTOS = [
     location: "Gothenburg, Sweden",
   },
         {
-    src:     "assets/images/Qeshlagh.jpg",
+    src:     "assets/images/Qeshalgh.jpg",
     caption: "Fishing at Qeshlagh Dam, June 2021",
     location: "Sanandaj, Iran",
   },        
