@@ -306,7 +306,7 @@ window.ELECTRONICS_POSTS = [
       { src: "assets/images/Coil.jpg", caption: "Coils driver" },
       { src: "assets/images/Coil2.jpg", caption: "Close-up of the driver" },
       { src: "assets/images/Coil3.jpg", caption: "Me with the setup" },
-      { src: "assets/images/Coil3.jpg", caption: "The coils and the cooling system." },]
+      { src: "assets/images/Coil4.jpg", caption: "The coils and the cooling system." },]
     // // Video: paste a YouTube or Vimeo video, or set to null to skip.
     // video: { type: "youtube", videoId: "VIDEO_ID_HERE", title: "ESP32 Weather Station Demo" },
     // // video: null,
