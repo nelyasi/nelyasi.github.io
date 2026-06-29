@@ -219,6 +219,26 @@ window.FISHING_PHOTOS = [
     caption: "Fishing at Gothenburg Harbour, July 2025",
     location: "Gothenburg, Sweden",
   },
+        {
+    src:     "assets/images/Qeshlagh.jpg",
+    caption: "Fishing at Qeshlagh Dam, June 2021",
+    location: "Sanandaj, Iran",
+  },        
+        {
+    src:     "assets/images/Zribar.jpg",
+    caption: "Fishing at Zribar Lake, July 2021",
+    location: "Marivan, Iran",
+  },
+          {
+    src:     "assets/images/Pike.jpg",
+    caption: "Catching Pike in Zribar Lake, July 2021",
+    location: "Marivan, Iran",
+  },
+            {
+    src:     "assets/images/Carp.jpg",
+    caption: "Catching Carp in Qeshlagh Dam, July 2018",
+    location: "Sanandaj, Iran",
+  },
 ];
 
 /* ── Fishing Videos ─────────────────────────────────────────── */
