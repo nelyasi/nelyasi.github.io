@@ -293,23 +293,7 @@ window.FISHING_SPOTS = [
 // Posts are shown newest-first.
 window.ELECTRONICS_POSTS = [
   // ── ADD a blog post (copy and uncomment this template):
-  {
-    date:    "2023",        // YYYY-MM-DD format
-    title:   "Building an Precision Laser Driver with Buck Converter and PID Control",
-    tags:    ["AVR", "C++", "Buck Converter", "OLED"],
-    // Text: each string in the array becomes a paragraph.
-    text: [
-"      Built a precision laser driver using an AVR microcontroller, buck converter, and PID control. The system maintains stable laser output by adjusting the current based on feedback from a photodiode.",
-    ],
-    // Images: upload files to assets/images/ and list them here.
-    images: [
-      { src: "assets/images/Laser.jpg", caption: "Final experimental setup" },
-      { src: "assets/images/Laser2.jpg", caption: "Close-up of the board" },]
-    // // Video: paste a YouTube or Vimeo video, or set to null to skip.
-    // video: { type: "youtube", videoId: "VIDEO_ID_HERE", title: "ESP32 Weather Station Demo" },
-    // // video: null,
-  },   
-  {
+   {
     date:    "2024",        // YYYY-MM-DD format
     title:   "Building an experimntal Setup for Gnenertatign a Unified Percise Magnetic Field for Deposition of Magnetic Nanoparticles",
     tags:    ["Coil", "Magnetic Field", "Buck Converter", "PID Control"],
@@ -327,6 +311,23 @@ window.ELECTRONICS_POSTS = [
     // video: { type: "youtube", videoId: "VIDEO_ID_HERE", title: "ESP32 Weather Station Demo" },
     // // video: null,
   },
+  {
+    date:    "2023",        // YYYY-MM-DD format
+    title:   "Building an Precision Laser Driver with Buck Converter and PID Control",
+    tags:    ["AVR", "C++", "Buck Converter", "OLED"],
+    // Text: each string in the array becomes a paragraph.
+    text: [
+"      Built a precision laser driver using an AVR microcontroller, buck converter, and PID control. The system maintains stable laser output by adjusting the current based on feedback from a photodiode.",
+    ],
+    // Images: upload files to assets/images/ and list them here.
+    images: [
+      { src: "assets/images/Laser.jpg", caption: "Final experimental setup" },
+      { src: "assets/images/Laser2.jpg", caption: "Close-up of the board" },]
+    // // Video: paste a YouTube or Vimeo video, or set to null to skip.
+    // video: { type: "youtube", videoId: "VIDEO_ID_HERE", title: "ESP32 Weather Station Demo" },
+    // // video: null,
+  }
+ 
   //
   // ── Another example — text-only post, no images or video:
   // {
