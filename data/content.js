@@ -293,24 +293,22 @@ window.FISHING_SPOTS = [
 // Posts are shown newest-first.
 window.ELECTRONICS_POSTS = [
   // ── ADD a blog post (copy and uncomment this template):
-  // {
-  //   date:    "2025-06-01",        // YYYY-MM-DD format
-  //   title:   "Building an ESP32 Weather Station",
-  //   tags:    ["ESP32", "C++", "BME280", "OLED"],
-  //   // Text: each string in the array becomes a paragraph.
-  //   text: [
-  //     "I've been meaning to build a low-power weather logger for the balcony for a while. The ESP32 wakes every 10 minutes, reads temperature, humidity, and pressure from a BME280, and pushes the data to a local MQTT broker over Wi-Fi.",
-  //     "The trickiest part was getting deep-sleep current low enough for the LiPo + solar setup to actually be self-sustaining in Swedish winter light levels. Spoiler: it required disabling the Wi-Fi PA and tuning the wakeup timer carefully.",
-  //   ],
-  //   // Images: upload files to assets/images/ and list them here.
-  //   images: [
-  //     { src: "assets/images/esp32-weather-pcb.jpg", caption: "The custom PCB before soldering the SMD passives." },
-  //     { src: "assets/images/esp32-weather-case.jpg", caption: "Finished unit in its 3D-printed weatherproof enclosure." },
-  //   ],
-  //   // Video: paste a YouTube or Vimeo video, or set to null to skip.
-  //   video: { type: "youtube", videoId: "VIDEO_ID_HERE", title: "ESP32 Weather Station Demo" },
-  //   // video: null,
-  // },
+  {
+    date:    "2023",        // YYYY-MM-DD format
+    title:   "Building an Precision Laser Driver with Buck Converter and PID Control",
+    tags:    ["AVR", "C++", "Buck Converter", "OLED"],
+    // Text: each string in the array becomes a paragraph.
+    text: [
+"      Built a precision laser driver using an AVR microcontroller, buck converter, and PID control. The system maintains stable laser output by adjusting the current based on feedback from a photodiode.",
+    ],
+    // Images: upload files to assets/images/ and list them here.
+    images: [
+      { src: "assets/images/Laser.jpg", caption: "Final experimental setup" },
+      { src: "assets/images/Laser2.jpg", caption: "Close-up of the board" },]
+    // // Video: paste a YouTube or Vimeo video, or set to null to skip.
+    // video: { type: "youtube", videoId: "VIDEO_ID_HERE", title: "ESP32 Weather Station Demo" },
+    // // video: null,
+  },
   //
   // ── Another example — text-only post, no images or video:
   // {
