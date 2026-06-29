@@ -308,6 +308,24 @@ window.ELECTRONICS_POSTS = [
     // // Video: paste a YouTube or Vimeo video, or set to null to skip.
     // video: { type: "youtube", videoId: "VIDEO_ID_HERE", title: "ESP32 Weather Station Demo" },
     // // video: null,
+  },   
+  {
+    date:    "2024",        // YYYY-MM-DD format
+    title:   "Building an experimntal Setup for Gnenertatign a Unified Percise Magnetic Field for Deposition of Magnetic Nanoparticles",
+    tags:    ["Coil", "Magnetic Field", "Buck Converter", "PID Control"],
+    // Text: each string in the array becomes a paragraph.
+    text: [
+"      Built an experimental setup for generating a unified precision magnetic field for the deposition of magnetic nanoparticles. This setup was based on Helmholtz coil configuration and used a buck converter with PID control to maintain a stable magnetic field. The temperature of the coilsused to be cooled down by a handmade water cooling system to prevent overheating during long experiments.",
+    ],
+    // Images: upload files to assets/images/ and list them here.
+    images: [
+      { src: "assets/images/Coil.jpg", caption: "Coils driver" },
+      { src: "assets/images/Coil2.jpg", caption: "Close-up of the driver" },
+      { src: "assets/images/Coil3.jpg", caption: "Me with the setup" },
+      { src: "assets/images/Coil3.jpg", caption: "The coils and the cooling system." },]
+    // // Video: paste a YouTube or Vimeo video, or set to null to skip.
+    // video: { type: "youtube", videoId: "VIDEO_ID_HERE", title: "ESP32 Weather Station Demo" },
+    // // video: null,
   },
   //
   // ── Another example — text-only post, no images or video:
