@@ -317,12 +317,28 @@ window.ELECTRONICS_POSTS = [
     tags:    ["AVR", "C++", "Buck Converter", "OLED"],
     // Text: each string in the array becomes a paragraph.
     text: [
-"      Built a precision laser driver using an AVR microcontroller, buck converter, and PID control. The system maintains stable laser output by adjusting the current based on feedback from a photodiode.",
+       "Built a precision laser driver using an AVR microcontroller, buck converter, and PID control. The system maintains stable laser output by adjusting the current based on feedback from a photodiode.",
     ],
     // Images: upload files to assets/images/ and list them here.
     images: [
       { src: "assets/images/Laser.jpg", caption: "Final experimental setup" },
       { src: "assets/images/Laser2.jpg", caption: "Close-up of the board" },]
+    // // Video: paste a YouTube or Vimeo video, or set to null to skip.
+    // video: { type: "youtube", videoId: "VIDEO_ID_HERE", title: "ESP32 Weather Station Demo" },
+    // // video: null,
+  }, 
+    {
+    date:    "2021",        // YYYY-MM-DD format
+    title:   "Desgin and Buidling a IOT Control Statioon for contolling electronic devices using SMS and GSM module",
+    tags:    ["AVR", "C++", "Arduino", "LCD", "GSM Module"],
+    // Text: each string in the array becomes a paragraph.
+    text: [
+      "Building an IOT control station for controlling electronic devices using SMS and GSM module. The system allows users to send commands via SMS to control various devices remotely. It features an AVR microcontroller, an LCD display for status updates, and a GSM module for communication.",
+    ],
+    // Images: upload files to assets/images/ and list them here.
+    images: [
+      { src: "assets/images/SMS1.jpg", caption: "In the Assembly" },
+      { src: "assets/images/SMS2.jpg", caption: "Final Setup" },]
     // // Video: paste a YouTube or Vimeo video, or set to null to skip.
     // video: { type: "youtube", videoId: "VIDEO_ID_HERE", title: "ESP32 Weather Station Demo" },
     // // video: null,
